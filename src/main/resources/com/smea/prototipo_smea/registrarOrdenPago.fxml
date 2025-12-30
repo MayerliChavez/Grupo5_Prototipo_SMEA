@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane fx:id="paneFondo" stylesheets="@../../../css/estilos-orden-pago.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.registrarOrdenPagoController">
+
+   <children>
+      <Pane fx:id="paneContenedor" layoutX="110.0" layoutY="63.0" prefHeight="600.0" prefWidth="1250.0" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="63.0">
+
+         <children>
+
+            <Label fx:id="textBienvenida" alignment="CENTER" layoutX="34.0" layoutY="69.0" prefWidth="1250" text="Registrar un Orden de Pago" />
+
+            <Label fx:id="labelDatosPersonales" layoutX="215.0" layoutY="188.0" text="Datos" />
+            <Label layoutX="221.0" layoutY="227.0" text="Proveedor/es:" />
+            <TextField fx:id="textFieldProveedor" layoutX="376.0" layoutY="224.0" prefHeight="9.0" prefWidth="475.0" />
+
+            <Label fx:id="labelMonto" layoutX="891.0" layoutY="222.0" text="Monto:" />
+            <Label fx:id="textFielDinero" layoutX="1095.0" layoutY="222.0" text="\$" />
+            <TextField fx:id="textFieldMonto" layoutX="972.0" layoutY="220.0" prefWidth="106" />
+
+            <Label fx:id="labelFechaEmision" layoutX="220.0" layoutY="289.0" text="Fecha emisión:" />
+            <DatePicker fx:id="datePickerFechaEmision" layoutX="381.0" layoutY="283.0" prefHeight="30.0" prefWidth="239.0" />
+
+            <Label fx:id="labelTipoPago" layoutX="219.0" layoutY="340.0" text="Tipo de pago:" />
+            <TextField fx:id="textFieldTipoPago" layoutX="368.0" layoutY="339.0" prefHeight="34.0" prefWidth="212.0" />
+
+            <Label fx:id="labelObservaciones" layoutX="229.0" layoutY="390.0" text="Observaciones del sistema:" />
+            <TextArea fx:id="textAreaObservaciones" layoutX="497.0" layoutY="393.0" prefHeight="135.0" prefWidth="560.0" />
+            <Line fx:id="lineBienvenida" endX="643.158935546875" endY="16.15362548828125" layoutX="454.0" layoutY="139.0" opacity="0.78" startX="-249.35867309570312" startY="19.0" stroke="WHITE" strokeWidth="5.0" />
+            <Label fx:id="datePickerFechaVigencia" layoutX="678.0" layoutY="290.0" text="Fecha de vigencia:" />
+            <DatePicker fx:id="datePickerFechaVigente" layoutX="857.0" layoutY="282.0" prefHeight="30.0" prefWidth="239.0" />
+            <Label fx:id="labelTiempoEntrega" layoutX="612.0" layoutY="341.0" text="Tiempo de entrega:" />
+            <TextField fx:id="textFieldTiempoEntrega" layoutX="810.0" layoutY="339.0" prefHeight="34.0" prefWidth="212.0" />
+
+         </children>
+      </Pane>
+
+      <Button fx:id="buttonRegresar" layoutX="127.0" layoutY="688.0" onAction="#regresarMenuProveedor" text="Regresar" />
+
+            <Button fx:id="buttonRegistrarDocumentoRespaldo" layoutX="1188.0" layoutY="690.0" onAction="#clickRegistrarDocumentoRespaldo" text="Registrar documento de respaldo" />
+
+                  <Button fx:id="buttonCrearOrdenPago" layoutX="679.0" layoutY="644.0" onAction="#clickCreaOrdenPago" text="Crear Orden de Pago" />
+   </children>
+</AnchorPane>

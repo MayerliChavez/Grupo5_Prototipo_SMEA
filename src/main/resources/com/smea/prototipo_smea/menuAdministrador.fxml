@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneFondo" stylesheets="@../../../css/menuAdministradorCSS.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.menuAdministradorController">
+   <children>
+      <Pane fx:id="labelContenedor" layoutX="23.0" layoutY="22.0" prefHeight="600.0" prefWidth="1250.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0">
+         <children>
+             <Label fx:id="textBienvenida" layoutX="76.0" layoutY="67.0" text="BIENVENIDO AL MENÚ DEL ADMINISTRADOR" textAlignment="CENTER" wrapText="true">
+                 <font>
+                     <Font name="System Bold Italic" size="24.0" />
+                 </font>
+         </Label>
+            <Label fx:id="textNombre" layoutX="338.0" layoutY="163.0" text="Nombres y Apellidos:" />
+            <TextField fx:id="labelNombre" layoutX="558.0" layoutY="156.0" prefHeight="44.0" prefWidth="394.0" />
+            <Button fx:id="buttonmoduloreporte" alignment="CENTER" layoutX="113.0" layoutY="240.0" onAction="#clickIngresarModuloReportes" prefHeight="125.0" prefWidth="220.0" styleClass="btn-reportes" text="Módulo de Reportes" textAlignment="CENTER" wrapText="true" />
+             <Button fx:id="buttonModuloAdministracionSistema" contentDisplay="TOP" layoutX="249.0" layoutY="393.0" prefHeight="146.0" prefWidth="220.0" text="Módulo de Administración del Sistema" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="buttonActualizarDatos" layoutX="558.0" layoutY="401.0" mnemonicParsing="false" onAction="#clickActualizarInformacionPersonal" prefHeight="125.0" prefWidth="220.0" styleClass="btn-informacionPersonal" text="Actualizar Datos Personal" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="buttonActualizarCredenciales" layoutX="891.0" layoutY="401.0" mnemonicParsing="false" onAction="#clcikActualizarCredenciales" prefHeight="125.0" prefWidth="220.0" styleClass="btn-actualizarCredenciales" text="Actualizar Credenciales" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="buttonModuloProveedor" layoutX="1011.0" layoutY="243.0" mnemonicParsing="false" onAction="#clickIngresarModuloProveedores" prefHeight="125.0" prefWidth="220.0" styleClass="btn-proveedor" text="Módulo de Proveedores" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="buttonModuloInventario" layoutX="402.0" layoutY="244.0" mnemonicParsing="false" onAction="#clickIngresarModuloInventario" prefHeight="125.0" prefWidth="220.0" styleClass="btn-inventario" text="Módulo de inventario " textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="buttonModuloCliente" layoutX="715.0" layoutY="242.0" mnemonicParsing="false" onAction="#clickIngresarModuloClientes" prefHeight="125.0" prefWidth="220.0" styleClass="btn-cliente" text="Módulo de Clientes" textAlignment="CENTER" wrapText="true" />
+         </children>
+      </Pane>
+       <Button fx:id="buttonRegresarMenuPrincipal" layoutX="117.0" layoutY="673.0" mnemonicParsing="false" onAction="#clikcRegresarMenuPrincipal" text="Regresar al Menú Principal" wrapText="true" />
+   </children>
+</AnchorPane>

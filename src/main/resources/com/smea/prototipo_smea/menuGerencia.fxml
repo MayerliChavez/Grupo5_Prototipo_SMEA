@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="paneFondo" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../css/menusPerfilesCSS.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.menuGerenciaController">
+   <children>
+      <Pane fx:id="labelContenedor" layoutX="27.0" layoutY="18.0" prefHeight="365.0" prefWidth="546.0">
+         <children>
+            <Label fx:id="textBienvenida" layoutX="64.0" text="BIENVENIDO AL MENÚ DEL&#10;GERENTE" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="textNombre" layoutX="22.0" layoutY="103.0" text="Nombres y Apellidos:" />
+            <TextField fx:id="labelNombre" layoutX="207.0" layoutY="98.0" prefHeight="14.0" prefWidth="293.0" />
+            <Label fx:id="textSeleccion" layoutX="19.0" layoutY="138.0" text="Seleccione a que módulo desea ingresar: " />
+            <Button fx:id="buttonmoduloreporte" layoutX="159.0" layoutY="169.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="255.0" text="Ingresar al Módulo de Reportes " />
+            <Button fx:id="buttonModuloAuditoria" layoutX="159.0" layoutY="264.0" mnemonicParsing="false" text="Ingresar al Módulo de Auditoría " />
+            <Button fx:id="buttonRegresarMenuPrincipal" layoutX="22.0" layoutY="317.0" mnemonicParsing="false" onAction="#clikcRegresarMenuPrincipal" text="Regresar al Menú Principal" />
+            <Button fx:id="buttonActualizarDatos" layoutX="159.0" layoutY="216.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="255.0" text="Actualizar Información Personal" />
+            <Button fx:id="buttonActualizarCredenciales" layoutX="318.0" layoutY="317.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="214.0" text="Actualizar Credenciales" />
+         </children>
+      </Pane>
+   </children>
+</Pane>

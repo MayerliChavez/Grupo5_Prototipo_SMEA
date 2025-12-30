@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneFondo" stylesheets="@../../../css/estilos-lista-proveedores.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.consultarProductoProveedorController">
+   <children>
+      <Pane fx:id="paneContenedor" layoutX="110.0" layoutY="63.0" prefHeight="600.0" prefWidth="1250.0" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="63.0">
+         <children>
+            <Label fx:id="labelBienvenida" layoutX="225.0" layoutY="40.0" text="Consultar Producto del Proveedor">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textFielNombreProveedor" layoutX="547.0" layoutY="134.0" prefHeight="41.0" prefWidth="485.0" />
+            <Button fx:id="buttonBuscar" layoutX="1046.0" layoutY="134.0" mnemonicParsing="false" onAction="#buscarProveedor" text="Buscar" />
+            <TableView fx:id="tableViewTablaContenido" layoutX="128.0" layoutY="195.0" prefHeight="381.0" prefWidth="1091.0">
+               <columns>
+                  <TableColumn fx:id="tableColumnProveedor" prefWidth="392.28380584716797" text="Proveedor" />
+                  <TableColumn fx:id="tableColumnNombreProducto" prefWidth="396.5161437988281" text="Nombre del producto" />
+                  <TableColumn fx:id="tableColumnCosto" prefWidth="161.5732421875" text="Costo($)" />
+                  <TableColumn fx:id="tableColumnEstado" prefWidth="142.709228515625" text="Estado" />
+               </columns>
+            </TableView>
+            <Label fx:id="labelIngresarNombreProveedor" layoutX="221.0" layoutY="140.0" text="Ingrese el nombre del proveedor:" />
+         </children>
+      </Pane>
+      <Button fx:id="buttonRegresar" layoutX="128.0" layoutY="680.0" mnemonicParsing="false" onAction="#regresarModuloProveedor" text="Regresar" />
+      <Button fx:id="buttonVerDetalle" layoutX="1349.0" layoutY="680.0" mnemonicParsing="false" onAction="#verDetalleProveedor" text="Ver detalles" />
+      <Button fx:id="buttonEstado" layoutX="640.0" layoutY="663.0" mnemonicParsing="false" onAction="#cambiarEstadoProveedor" text="Cambiar el estado del producto" />
+   </children>
+</AnchorPane>

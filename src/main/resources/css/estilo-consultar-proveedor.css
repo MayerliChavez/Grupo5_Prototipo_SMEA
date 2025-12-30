@@ -1,0 +1,161 @@
+/* ===============================
+   CONFIGURACIÓN GENERAL
+================================ */
+.root {
+    -fx-font-family: "Segoe UI Semibold", "Segoe UI";
+    -fx-font-size: 14px;
+    -fx-text-fill: #263238;
+}
+
+/* ===============================
+   FONDO GENERAL (DEGRADADO CLARO)
+================================ */
+#paneFondo {
+    -fx-background-color: linear-gradient(
+            to bottom right,
+            #F5F7FA,
+            #E3EDF7
+    );
+}
+
+/* ===============================
+   CONTENEDOR PRINCIPAL
+================================ */
+#paneContenedor {
+    -fx-background-color: rgba(255, 255, 255, 0.85);
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+    -fx-border-color: #CFD8DC;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.15),
+            15,
+            0.3,
+            0,
+            6
+    );
+}
+
+/* ===============================
+   TÍTULO
+================================ */
+#labelBienvenida {
+    -fx-font-size: 60px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1E3C72;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.2),
+            6,
+            0.3,
+            0,
+            2
+    );
+}
+
+/* ===============================
+   LABELS
+================================ */
+.label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #37474F;
+}
+
+/* ===============================
+   CAMPOS DE TEXTO
+================================ */
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #B0BEC5;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 6 10;
+    -fx-font-size: 18px;
+}
+
+.text-field:focused {
+    -fx-border-color: #1E88E5;
+}
+
+/* ===============================
+   TABLA
+================================ */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-border-color: #CFD8DC;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to right, #E3EDF7, #F5F7FA);
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-size: 32;
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #1E3C72;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell {
+    -fx-background-color: white;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #BBDEFB;
+}
+
+/* ===============================
+   BOTONES
+================================ */
+.button {
+    -fx-background-color: linear-gradient(to right, #1E3C72, #2A5298);
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+    -fx-padding: 8 18;
+    -fx-cursor: hand;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.25),
+            5,
+            0.2,
+            0,
+            2
+    );
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to right, #2A5298, #1E3C72);
+}
+
+.button:pressed {
+    -fx-scale-x: 0.97;
+    -fx-scale-y: 0.97;
+}
+
+/* ===============================
+   BOTÓN REGRESAR (SECUNDARIO)
+================================ */
+#buttonRegresar {
+    -fx-background-color: transparent;
+    -fx-text-fill: #1E3C72;
+    -fx-border-color: #1E3C72;
+    -fx-border-radius: 18;
+}
+
+#buttonRegresar:hover {
+    -fx-background-color: rgba(30, 60, 114, 0.1);
+}

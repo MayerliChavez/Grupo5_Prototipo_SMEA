@@ -1,0 +1,205 @@
+/* ===============================
+   CONFIGURACIÓN GENERAL
+================================ */
+.root {
+    -fx-font-family: "Segoe UI", "Arial";
+    -fx-text-fill: #37474F;
+}
+
+/* ===============================
+   FONDO GENERAL (DEGRADADO CLARO)
+================================ */
+#paneFondo {
+    -fx-background-color: linear-gradient(
+            to bottom right,
+            #F4F6F8,
+            #E3F2FD
+    );
+}
+
+/* ===============================
+   CONTENEDOR PRINCIPAL
+================================ */
+#paneContenedor {
+    -fx-background-color: rgba(255,255,255,0.88);
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-color: #CFD8DC;
+    -fx-border-width: 1.5;
+    -fx-padding: 30;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.12),
+            18,
+            0.3,
+            0,
+            6
+    );
+}
+
+/* ===============================
+   TÍTULO PRINCIPAL
+================================ */
+#textBienvenida,
+#labelBienvenida {
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #263238;
+    -fx-alignment: center;
+}
+
+/* ===============================
+   LABELS GENERALES
+================================ */
+.label {
+    -fx-font-size: 19px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #455A64;
+}
+
+/* ===============================
+   CAMPOS DE TEXTO
+================================ */
+.text-field,
+.text-area {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #B0BEC5;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-font-size: 16px;
+    -fx-padding: 8 12;
+}
+
+/* Focus */
+.text-field:focused,
+.text-area:focused,
+.choice-box:focused {
+    -fx-border-color: #42A5F5;
+    -fx-border-width: 2;
+}
+
+/* ===============================
+   CHOICE BOX
+================================ */
+.choice-box {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #B0BEC5;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.choice-box .label {
+    -fx-text-fill: #37474F;
+}
+
+/* ===============================
+   DATE PICKER
+================================ */
+.date-picker {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #B0BEC5;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.date-picker .text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: #37474F;
+}
+
+/* Botón calendario */
+.date-picker .arrow-button {
+    -fx-background-color: linear-gradient(
+            to bottom,
+            #64B5F6,
+            #42A5F5
+    );
+    -fx-background-radius: 0 10 10 0;
+}
+
+.date-picker .arrow {
+    -fx-background-color: white;
+}
+
+/* Popup calendario */
+.date-picker-popup {
+    -fx-background-color: white;
+    -fx-border-color: #90CAF9;
+}
+
+.date-picker-popup .day-cell {
+    -fx-background-color: white;
+    -fx-text-fill: #37474F;
+}
+
+.date-picker-popup .day-cell:hover {
+    -fx-background-color: #BBDEFB;
+}
+
+.date-picker-popup .day-cell:selected {
+    -fx-background-color: #42A5F5;
+    -fx-text-fill: white;
+}
+
+/* ===============================
+   BOTONES GENERALES
+================================ */
+.button {
+    -fx-background-color: linear-gradient(
+            to right,
+            #64B5F6,
+            #42A5F5
+    );
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 22;
+    -fx-padding: 10 24;
+    -fx-cursor: hand;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.2),
+            6,
+            0.2,
+            0,
+            3
+    );
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(
+            to right,
+            #42A5F5,
+            #1E88E5
+    );
+}
+
+.button:pressed {
+    -fx-scale-x: 0.96;
+    -fx-scale-y: 0.96;
+}
+
+/* ===============================
+   BOTÓN REGRESAR
+================================ */
+#buttonRegresar {
+    -fx-background-color: transparent;
+    -fx-text-fill: #1E88E5;
+    -fx-border-color: #90CAF9;
+    -fx-border-radius: 22;
+}
+
+#buttonRegresar:hover {
+    -fx-background-color: #E3F2FD;
+}
+
+/* ===============================
+   TEXTO SECUNDARIO
+================================ */
+#labelArchivo {
+    -fx-font-size: 14px;
+    -fx-font-style: italic;
+    -fx-text-fill: #607D8B;
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane fx:id="paneFondo" stylesheets="@../../../css/estilos-lista-proveedores.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.visualizarHistorialDePagosController">
+   <children>
+      <Pane fx:id="paneContenedor" layoutX="110.0" layoutY="63.0" prefHeight="600.0" prefWidth="1250.0" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="63.0">
+         <children>
+            <Label fx:id="labelBienvenida" layoutX="472.0" layoutY="72.0" text="Historial de Pagos">
+            </Label>
+            <TableView fx:id="tableViewOrdenPago" layoutX="134.0" layoutY="258.0" prefHeight="299.0" prefWidth="1090.0">
+              <columns>
+                <TableColumn fx:id="tableColumnCodigo" prefWidth="142.62950897216797" text="Código" />
+                <TableColumn fx:id="tableColumnProveedor" prefWidth="441.9539489746094" text="Proveedor" />
+                  <TableColumn fx:id="tableColumnFecha" prefWidth="158.8460693359375" text="Fecha" />
+                  <TableColumn fx:id="tableColumnMonto" prefWidth="138.47509765625" text="Monto($)" />
+                  <TableColumn fx:id="tableColumnTipoPago" prefWidth="209.76934814453125" text="Tipo de pago" />
+              </columns>
+            </TableView>
+            <Label fx:id="labelIngresarNombreProveedor" layoutX="245.0" layoutY="202.0" text="Ingrese el nombre del proveedor:" />
+            <TextField fx:id="textFielNombreProveedor" layoutX="563.0" layoutY="197.0" prefHeight="41.0" prefWidth="391.0" />
+            <Button fx:id="buttonBuscar" layoutX="983.0" layoutY="197.0" mnemonicParsing="false" onAction="#buscarProveedor" text="Buscar" />
+            <Line endX="416.4520263671875" endY="1.52587890625E-5" layoutX="587.0" layoutY="160.0" startX="-145.18365478515625" startY="1.52587890625E-5" stroke="WHITE" strokeWidth="5.0" />
+         </children>
+      </Pane>
+      <Button fx:id="buttonRegresar" layoutX="133.0" layoutY="673.0" mnemonicParsing="false" onAction="#regresarMenu" text="Regresar" />
+      <Button fx:id="buttonVerDetalle" layoutX="1316.0" layoutY="672.0" mnemonicParsing="false" onAction="#verDetalleOrden" text="Ver Detalles" />
+      <Button fx:id="buttonGenerarPDF" layoutX="699.0" layoutY="672.0" mnemonicParsing="false" onAction="#generarPDF" text="Generar PDF" />
+   </children>
+</AnchorPane>

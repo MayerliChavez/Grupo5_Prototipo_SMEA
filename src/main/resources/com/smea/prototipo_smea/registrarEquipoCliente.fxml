@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane fx:id="panelFondo" stylesheets="@../../../css/estilo-detalle-orden-pago.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.registrarEquipoClienteController">
+    <children>
+        <Pane fx:id="panelContenedor" layoutX="110.0" layoutY="63.0" prefHeight="600.0" prefWidth="1250.0" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="63.0">
+            <children>
+                <Label fx:id="labelBienvenida" layoutX="301.0" layoutY="6.0" text="Registrar Equipo Del Cliente">
+                </Label>
+                <Label fx:id="labeCliente" layoutX="450.0" layoutY="118.0" text="Buscar cliente por:" />
+                <ChoiceBox fx:id="chiceBoxCliente" layoutX="627.0" layoutY="112.0" prefHeight="43.0" prefWidth="279.0" />
+                <Line endX="838.353515625" layoutX="404.0" layoutY="94.0" startX="-172.90960693359375" startY="-1.52587890625E-5" stroke="WHITE" strokeWidth="5.0" />
+            <Label fx:id="labelCedulaCliente" layoutX="335.0" layoutY="241.0" text="Ingrese la cedula:" />
+            <TextField fx:id="textfieldCedulCliente" layoutX="498.0" layoutY="237.0" prefHeight="35.0" prefWidth="478.0" />
+            <Button layoutX="986.0" layoutY="236.0" mnemonicParsing="false" text="Buscar" />
+            <TableView fx:id="tableViewClientes" layoutX="161.0" layoutY="299.0" prefHeight="256.0" prefWidth="1011.0">
+              <columns>
+                <TableColumn fx:id="tableColumnNombre" prefWidth="396.77020263671875" text="Nombre" />
+                <TableColumn fx:id="tableColumnCedula" prefWidth="227.983154296875" text=" Cédula " />
+                  <TableColumn fx:id="tableColumnTelefono" prefWidth="223.216796875" text="Teléfono" />
+                  <TableColumn fx:id="tableColumnEstado" prefWidth="163.34832763671875" text="Estado" />
+              </columns>
+            </TableView>
+            <Label fx:id="labelNombreCliente" layoutX="321.0" layoutY="176.0" text="Ingrese el nombre:" />
+            <TextField fx:id="textFieldNombreCliente" layoutX="499.0" layoutY="174.0" prefHeight="35.0" prefWidth="478.0" />
+            <Button layoutX="990.0" layoutY="171.0" mnemonicParsing="false" text="Buscar" />
+            </children>
+        </Pane>
+        <Button fx:id="buttonRegresar" layoutX="138.0" layoutY="678.0" mnemonicParsing="false" onAction="#regresarModuloProveedor" text="Regresar" />
+        <Button fx:id="buttonRegistrarProducto" layoutX="1290.0" layoutY="678.0" mnemonicParsing="false" onAction="#registrarProducto" text="Registrar Equipo" />
+    </children>
+</AnchorPane>

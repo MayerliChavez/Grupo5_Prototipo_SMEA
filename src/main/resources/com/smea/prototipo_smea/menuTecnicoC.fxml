@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<AnchorPane fx:id="paneFondo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../css/menusPerfilesCSS.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.menuTecnicoCController">
+   <children>
+      <Pane fx:id="labelContenedor" layoutX="29.0" layoutY="22.0" prefHeight="356.0" prefWidth="546.0">
+         <children>
+            <Label fx:id="textBienvenida" layoutX="35.0" text="BIENVENIDO AL MENÚ &#10;DEL TÉCNICO COORDINADOR" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="textNombre" layoutX="15.0" layoutY="102.0" text="Nombres y Apellidos:" />
+            <TextField fx:id="labelNombre" layoutX="205.0" layoutY="97.0" prefHeight="20.0" prefWidth="296.0" />
+            <Label fx:id="textSeleccion" layoutX="12.0" layoutY="137.0" text="Seleccione a que módulo desea ingresar: " />
+            <Button fx:id="buttonModuloClientes" layoutX="165.0" layoutY="255.0" mnemonicParsing="false" text="Ingresar al Módulo de Clientes" />
+            <Button fx:id="buttonRegresarMenuPrincipal" layoutX="16.0" layoutY="308.0" mnemonicParsing="false" onAction="#clikcRegresarMenuPrincipal" text="Regresar al Menú Principal" />
+            <Button fx:id="buttonActualizarDatos" layoutX="151.0" layoutY="212.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="269.0" text="Actualizar Información Personal" />
+            <Button fx:id="buttonActualizarCredenciales" layoutX="328.0" layoutY="308.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="209.0" text="Actualizar Credenciales" />
+            <Button fx:id="buttonModuloMantenimiento" layoutX="141.0" layoutY="168.0" mnemonicParsing="false" text="Ingresar al Módulo de Mantenimiento" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

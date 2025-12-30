@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane fx:id="panelFondo" stylesheets="@../../../css/estilo-detalle-orden-pago.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.registrarProductoQueOfreceProveedorController">
+   <children>
+      <Pane fx:id="panelContenedor" layoutX="110.0" layoutY="63.0" prefHeight="600.0" prefWidth="1250.0" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="63.0">
+         <children>
+            <Label fx:id="labelBienvenida" layoutX="298.0" layoutY="58.0" text="Registrar Producto en el Sistema">
+            </Label>
+            <Label fx:id="labeProveedor" layoutX="496.0" layoutY="177.0" text="Proveedor:" />
+            <Label fx:id="labelProducto" layoutX="263.0" layoutY="235.0" text="Nombre del producto:" />
+            <TextField fx:id="textFieldProducto" layoutX="475.0" layoutY="233.0" prefHeight="25.0" prefWidth="330.0" />
+            <Label fx:id="labelDescripcion" layoutX="268.0" layoutY="350.0" text="Descripción del producto:" />
+            <TextArea fx:id="textAreaDescripcion" layoutX="314.0" layoutY="387.0" prefHeight="165.0" prefWidth="829.0" />
+            <Label fx:id="labelCosto" layoutX="872.0" layoutY="234.0" text="Costo:" />
+            <TextField fx:id="textFieldCosto" layoutX="945.0" layoutY="232.0" prefHeight="35.0" prefWidth="125.0" />
+            <Label fx:id="labelCategoria" layoutX="265.0" layoutY="291.0" text="Categoría:" />
+            <ChoiceBox fx:id="chiceBoxProveedor" layoutX="604.0" layoutY="170.0" prefHeight="43.0" prefWidth="446.0" />
+            <ChoiceBox fx:id="choicEBoxCategoria" layoutX="367.0" layoutY="287.0" prefHeight="43.0" prefWidth="344.0" />
+            <Label fx:id="labelDinero" layoutX="1081.0" layoutY="234.0" text="\$" />
+            <Line endX="838.353515625" layoutX="401.0" layoutY="146.0" startX="-172.90960693359375" startY="-1.52587890625E-5" stroke="WHITE" strokeWidth="5.0" />
+         </children>
+      </Pane>
+      <Button fx:id="buttonRegresar" layoutX="138.0" layoutY="678.0" mnemonicParsing="false" onAction="#regresarModuloProveedor" text="Regresar" />
+      <Button fx:id="buttonRegistrarProducto" layoutX="1290.0" layoutY="678.0" mnemonicParsing="false" onAction="#registrarProducto" text="Registrar Producto" />
+   </children>
+</AnchorPane>

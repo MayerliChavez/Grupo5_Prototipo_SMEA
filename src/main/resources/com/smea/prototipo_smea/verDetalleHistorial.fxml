@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane fx:id="panelFondo" stylesheets="@../../../css/estilo-detalle-orden-pago.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.verDetalleHistorialController">
+    <children>
+        <Pane fx:id="panelContenedor" layoutX="110.0" layoutY="63.0" prefHeight="600.0" prefWidth="1250.0" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="63.0">
+            <children>
+                <Label fx:id="labelBienvenida" layoutX="293.0" layoutY="46.0" text="Detalles de la Orden de Pago" />
+                <Label fx:id="labelDatosPersonales" layoutX="22.0" layoutY="49.0" />
+            <Line endX="709.336669921875" endY="1.52587890625E-5" layoutX="410.0" layoutY="134.0" startX="-155.04714965820312" startY="1.52587890625E-5" stroke="WHITE" strokeWidth="5.0" />
+            <Label fx:id="labelDatosPersonales1" layoutX="208.0" layoutY="166.0" text="Datos:" />
+            <Label fx:id="labelPorveedor" layoutX="288.0" layoutY="201.0" text="Proveedor/es:" />
+            <TextField fx:id="textfieldNombreProveedor" layoutX="445.0" layoutY="198.0" prefHeight="35.0" prefWidth="342.0" />
+            <Label fx:id="labelTipoPago" layoutX="711.0" layoutY="251.0" text="Tipo de pago:" />
+            <Label fx:id="labelFecha" layoutX="290.0" layoutY="251.0" text="Fecha emision:" />
+            <Label fx:id="labelObservaciones" layoutX="99.0" layoutY="326.0" prefHeight="30.0" prefWidth="296.0" text="Observaciones del sistema:" />
+            <Label fx:id="labelMonto" layoutX="829.0" layoutY="200.0" text="Monto:" />
+            <TextField fx:id="textMondo" layoutX="902.0" layoutY="196.0" prefHeight="35.0" prefWidth="117.0" />
+            <DatePicker fx:id="dateFecha" layoutX="441.0" layoutY="247.0" />
+            <TextField fx:id="textTipoPago" layoutX="846.0" layoutY="247.0" prefHeight="35.0" prefWidth="201.0" />
+            <TextArea fx:id="textObservaciones" layoutX="133.0" layoutY="359.0" prefHeight="201.0" prefWidth="489.0" />
+            <Label fx:id="labelDinero" layoutX="1025.0" layoutY="197.0" text="\$" />
+            <Label fx:id="labelDocumentacion" layoutX="666.0" layoutY="325.0" text="Documentación de respaldo:" />
+            <TableView fx:id="tableViewDocumentos" layoutX="708.0" layoutY="360.0" prefHeight="200.0" prefWidth="564.0">
+               <columns>
+                  <TableColumn fx:id="colNombreArchivo" prefWidth="290.6500244140625" text="Archivo" />
+                  <TableColumn fx:id="colTipoArchivo" prefWidth="270.949951171875" text="Tipo" />
+               </columns>
+            </TableView>
+
+            </children>
+        </Pane>
+      <Button fx:id="buttonRegresar" layoutX="154.0" layoutY="674.0" mnemonicParsing="false" onAction="#regresarConsultarOrdenPago" text="Regresar" />
+    </children>
+</AnchorPane>

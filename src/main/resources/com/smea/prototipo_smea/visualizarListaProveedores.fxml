@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneFondo" stylesheets="@../../../css/estilos-lista-proveedores.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.visualizarListaProveedoresController">
+   <children>
+      <Pane fx:id="paneContenedor" layoutX="110.0" layoutY="63.0" prefHeight="600.0" prefWidth="1250.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <Label fx:id="labelBienvenida" layoutX="385.0" layoutY="34.0" text="Lista de Proveedores">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelIngresarNombreProveedor" layoutX="245.0" layoutY="139.0" text="Ingrese el nombre del proveedor:" />
+            <TextField fx:id="textFielNombreProveedor" layoutX="577.0" layoutY="132.0" prefHeight="41.0" prefWidth="405.0" />
+            <Button fx:id="buttonBuscar" layoutX="1005.0" layoutY="135.0" mnemonicParsing="false" onAction="#buscarProveedor" text="Buscar" />
+            <TableView fx:id="tableViewTablaContenido" layoutX="121.0" layoutY="210.0" prefHeight="318.0" prefWidth="1025.0">
+               <columns>
+                  <TableColumn fx:id="tableColumnNombre" prefWidth="358.90740966796875" text="Nombre" />
+                  <TableColumn fx:id="tableColumnRazonSocial" prefWidth="354.654296875" text="Razón Social" />
+                  <TableColumn fx:id="tableColumnRUC" prefWidth="163.7457275390625" text="RUC" />
+                  <TableColumn fx:id="tableColumnEstado" prefWidth="147.8912353515625" text="Estado" />
+               </columns>
+            </TableView>
+            <Button fx:id="buttonRegresar" layoutX="25.0" layoutY="580.0" mnemonicParsing="false" onAction="#regresarModuloProveedor" text="Regresar" />
+         </children>
+      </Pane>
+      <Button fx:id="buttonVerDetalle" layoutX="1292.0" layoutY="685.0" mnemonicParsing="false" onAction="#verDetalleProveedor" text="Ver detalles" />
+   </children>
+</AnchorPane>

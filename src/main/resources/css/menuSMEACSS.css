@@ -1,0 +1,149 @@
+/* ===============================
+   CONFIGURACIÓN GENERAL
+================================ */
+
+.root {
+    -fx-font-family: "Segoe UI Semibold Italic", "Segoe UI Italic";
+    -fx-font-size: 44px;
+    -fx-text-fill: #FFFFFF;
+}
+
+/* ===============================
+   CONTENEDOR CON IMAGEN + CAPA TRANSLÚCIDA
+================================ */
+#paneFondo {
+    -fx-background-image: url("../Imagenes/ImagenFondomenuSMEA.png");
+    -fx-background-size: cover;
+}
+#contenedor {
+    -fx-background-color: rgba(255, 255, 255, 0.30);
+    -fx-background-radius: 10px;
+    -fx-border-color: #CCCCCC;
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+}
+
+/* ===============================
+   TÍTULO PRINCIPAL
+================================ */
+
+#textoBienvenida {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 80px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+
+    /* Sombra más clara para mejor lectura */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.9), 12, 0.4, 0, 3);
+}
+
+/* ===============================
+   LABELS
+================================ */
+
+.label {
+    -fx-text-fill: #FFFFFF; /* Más claro */
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.9), 12, 0.4, 0, 3);
+}
+
+/* ===============================
+   CAMPOS DE TEXTO
+================================ */
+
+.text-field,
+.password-field,
+.choice-box {
+    -fx-background-color: rgba(255, 255, 255, 0.92);
+    -fx-border-color: #90A4AE;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+
+    /* 👉 TAMAÑO NORMAL */
+    -fx-font-size: 18px;
+
+    /* 👉 ALTURA NORMAL */
+    -fx-pref-height: 50px;
+    -fx-min-height: 50px;
+    -fx-max-height: 50px;
+
+    -fx-padding: 6 12 6 12;
+}
+
+
+/* Focus */
+.text-field:focused,
+.password-field:focused,
+.choice-box:focused {
+    -fx-border-color: #1E88E5;
+    -fx-border-width: 2;
+}
+
+/* ===============================
+   BOTÓN INGRESAR
+================================ */
+
+#buttonIngresar {
+    -fx-background-color: linear-gradient(to right, #1E3C72, #2A5298);
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 28;
+    -fx-padding: 10 34 10 34;
+    -fx-cursor: hand;
+
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 8, 0.3, 0, 2);
+}
+
+#buttonIngresar:hover {
+    -fx-background-color: linear-gradient(to right, #2A5298, #1E3C72);
+}
+
+#buttonIngresar:pressed {
+    -fx-scale-x: 0.96;
+    -fx-scale-y: 0.96;
+}
+
+/* ===============================
+   BOTÓN SALIR
+================================ */
+
+#buttonSalir {
+    -fx-background-color: rgba(255,255,255,0.08);
+    -fx-text-fill: #0e0808;
+    -fx-font-size: 20px;
+    -fx-border-color: rgba(18, 15, 15, 0.5);
+    -fx-border-radius: 22;
+    -fx-padding: 6 18 6 18;
+}
+
+#buttonSalir:hover {
+    -fx-background-color: rgba(255,255,255,0.20);
+    -fx-text-fill: #0009fd;
+    -fx-border-color: rgb(0, 9, 253);
+}
+
+/* ===============================
+   TEXTO DEL CHOICEBOX (NEGRO)
+================================ */
+
+/* Texto seleccionado */
+.choice-box .label {
+    -fx-text-fill: #242222;
+    -fx-effect: null;
+    -fx-font-size:19;
+    -fx-alignment: CENTER;
+    -fx-text-alignment: CENTER;
+}
+
+/* Opciones del menú desplegable */
+.choice-box .menu-item > .label {
+    -fx-text-fill: #242222;
+    -fx-font-size:20;
+    -fx-effect: null;
+    -fx-alignment: CENTER;
+    -fx-text-alignment: CENTER;
+}
+
