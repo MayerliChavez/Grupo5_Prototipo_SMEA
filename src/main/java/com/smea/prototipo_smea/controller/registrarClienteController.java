@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Control;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
@@ -37,16 +38,37 @@ public class registrarClienteController
     // ====== INIT ======
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        // Aquí puedes inicializar cosas si lo necesitas
+        configurarTabulacion();
+        textfieldNombre.setOnAction(e -> textfieldCedulaRUC.requestFocus());
+        textfieldCedulaRUC.setOnAction(e -> textfieldApellido.requestFocus());
+        textfieldApellido.setOnAction(e -> textfieldTelefono.requestFocus());
+        textfieldTelefono.setOnAction(e -> textfieldDireccion.requestFocus());
+        textfieldDireccion.setOnAction(e -> textfieldCorreo.requestFocus());
+        textfieldCorreo.setOnAction(e -> buttonCrearCliente.requestFocus());
+    }
+
+    private void configurarTabulacion() {
+        configurarTab(textfieldNombre, textfieldCedulaRUC);
+        configurarTab(textfieldCedulaRUC, textfieldApellido);
+        configurarTab(textfieldApellido, textfieldTelefono);
+        configurarTab(textfieldTelefono, textfieldDireccion);
+        configurarTab(textfieldDireccion, textfieldCorreo);
+        configurarTab(textfieldCorreo, buttonCrearCliente);
+    }
+
+    private void configurarTab(Control actual, Control siguiente) {
+        actual.setOnKeyPressed(event -> {
+            if (event.getCode() == javafx.scene.input.KeyCode.TAB) {
+                siguiente.requestFocus();
+                event.consume();
+            }
+        });
     }
 
     // =================================================
     // EVENTOS
     // =================================================
 
-    /**
-     * Registrar cliente
-     */
     @FXML
     private boolean clickCrearCliente(ActionEvent event) {
 
@@ -58,10 +80,11 @@ public class registrarClienteController
         String correo = textfieldCorreo.getText().trim();
 
         // ===== VALIDACIÓN BÁSICA =====
-        if (nombre.isEmpty() || apellido.isEmpty() || cedulaRuc.isEmpty()) {
+        if (nombre.isEmpty() || apellido.isEmpty() || cedulaRuc.isEmpty()
+           || telefono.isEmpty() || direccion.isEmpty() || correo.isEmpty()) {
             mostrarAlerta(
                     "Campos obligatorios",
-                    "Nombre, Apellido y Cédula/RUC son obligatorios",
+                    "Rellene los campos que son obligatorios",
                     Alert.AlertType.WARNING
             );
             return false;

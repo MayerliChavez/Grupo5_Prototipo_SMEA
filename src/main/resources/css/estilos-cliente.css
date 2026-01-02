@@ -62,86 +62,6 @@
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 5, 0.3, 0, 2);
 }
 
-.btn-registrarOrdenPago {
-    -fx-background-image: url("/Imagenes/iconoRegistrarOrdenPago.png");
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: center 10;
-    -fx-background-size: 26px 26px;
-
-    -fx-padding: 16 10 16 10;
-}
-
-.btn-listaProveedores {
-    -fx-background-image: url("/Imagenes/iconoListaProveedores.png");
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: center 10;
-    -fx-background-size: 26px 26px;
-
-    -fx-padding: 16 10 16 10;
-}
-
-.btn-consultarProducto {
-    -fx-background-image: url("/Imagenes/iconoConsultarProducto.png");
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: center 10;
-    -fx-background-size: 26px 26px;
-
-    -fx-padding: 16 10 16 10;
-}
-
-.btn-consultarProveedor {
-    -fx-background-image: url("/Imagenes/iconoConsultarProveedor.png");
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: center 10;
-    -fx-background-size: 26px 26px;
-
-    -fx-padding: 16 10 16 10;
-}
-
-.btn-consultarOrdenPago {
-    -fx-background-image: url("/Imagenes/iconoConsultarOrdenPago.png");
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: center 10;
-    -fx-background-size: 26px 26px;
-
-    -fx-padding: 16 10 16 10;
-}
-
-.btn-historialPagos {
-    -fx-background-image: url("/Imagenes/iconoHistorialPagos.png");
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: center 10;
-    -fx-background-size: 26px 26px;
-
-    -fx-padding: 16 10 16 10;
-}
-
-.btn-registrarProducto {
-    -fx-background-image: url("/Imagenes/iconoRegistrarProducto.png");
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: center 10;
-    -fx-background-size: 26px 26px;
-
-    -fx-padding: 16 10 16 10;
-}
-
-.btn-actualizarProveedor {
-    -fx-background-image: url("/Imagenes/iconoActualizarCredenciales.png");
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: center 10;
-    -fx-background-size: 26px 26px;
-
-    -fx-padding: 16 10 16 10;
-}
-
-.btn-registrarProveedor {
-    -fx-background-image: url("/Imagenes/iconoActualizarProveedor.png");
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: center 10;
-    -fx-background-size: 26px 26px;
-
-    -fx-padding: 16 10 16 10;
-}
 
 /* Hover elegante */
 .button:hover {
@@ -154,6 +74,87 @@
 .button:pressed {
     -fx-scale-x: 0.97;
     -fx-scale-y: 0.97;
+}
+
+.btn-consultarCliente {
+    -fx-background-image: url("/Imagenes/iconoConsultarCliente.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center 10;
+    -fx-background-size: 26px 26px;
+
+    -fx-padding: 16 10 16 10;
+}
+
+.btn-RegistrarCliente {
+    -fx-background-image: url("/Imagenes/iconoRegistrarCliente.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center 10;
+    -fx-background-size: 26px 26px;
+
+    -fx-padding: 16 10 16 10;
+}
+
+.btn-registrarEquipoCliente {
+    -fx-background-image: url("/Imagenes/iconoRegistrarEquipoCliente.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center 10;
+    -fx-background-size: 26px 26px;
+
+    -fx-padding: 16 10 16 10;
+}
+
+.btn-consultarEquipoCliente {
+    -fx-background-image: url("/Imagenes/iconoConsultarEquipoCliente.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center 10;
+    -fx-background-size: 26px 26px;
+
+    -fx-padding: 16 10 16 10;
+}
+
+.btn-actualizarDatosCliente {
+    -fx-background-image: url("/Imagenes/iconoActualizarDatosCliente.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center 10;
+    -fx-background-size: 26px 26px;
+
+    -fx-padding: 16 10 16 10;
+}
+
+.btn-programarCitaTecnica {
+    -fx-background-image: url("/Imagenes/iconoProgramarCitaTecnica.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center 10;
+    -fx-background-size: 26px 26px;
+
+    -fx-padding: 16 10 16 10;
+}
+
+.btn-consultarCitaTecnica {
+    -fx-background-image: url("/Imagenes/iconoConsultarCitaProgramada.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center 10;
+    -fx-background-size: 26px 26px;
+
+    -fx-padding: 16 10 16 10;
+}
+
+.btn-historialServicio {
+    -fx-background-image: url("/Imagenes/iconohistorial.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center 10;
+    -fx-background-size: 26px 26px;
+
+    -fx-padding: 16 10 16 10;
+}
+
+.btn-filtrarCita {
+    -fx-background-image: url("/Imagenes/iconoFiltro.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center 10;
+    -fx-background-size: 26px 26px;
+
+    -fx-padding: 16 10 16 10;
 }
 
 /* =========================================================

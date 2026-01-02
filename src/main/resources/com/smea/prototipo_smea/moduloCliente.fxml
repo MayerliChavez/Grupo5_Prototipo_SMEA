@@ -19,20 +19,20 @@
                 <TilePane alignment="CENTER" hgap="15" layoutX="93.0" layoutY="103.0" prefColumns="5" prefHeight="421.0" prefWidth="1109.0" vgap="15">
 
                     <children>
-                        <Button fx:id="buttonConsultarCliente" alignment="CENTER" onAction="#clickConsultarCliente" prefHeight="150.0" prefWidth="205.0" styleClass="btn-listaProveedores" text="Consultar Cliente" textAlignment="CENTER" wrapText="true" />
-                        <Button fx:id="buttonConsultarEquiposCliente" alignment="CENTER" onAction="#clickConsultarEquiposCliente" prefHeight="150.0" prefWidth="205.0" styleClass="btn-consultarOrdenPago" text="Consultar Equipos del Cliente" textAlignment="CENTER" wrapText="true" />
-                        <Button fx:id="buttonConsultarCitaProgramadas" alignment="CENTER" onAction="#clickConsultarCitaProgramadas" prefHeight="150.0" prefWidth="205.0" styleClass="btn-registrarProducto" text="Consultar Citas Programadas" textAlignment="CENTER" wrapText="true" />
-                        <Button fx:id="buttonActualizarDatosCliente" alignment="CENTER" onAction="#clickActualizarDatosCliente" prefHeight="150.0" prefWidth="205.0" styleClass="btn-consultarProducto" text="Actualizar Datos Cliente" textAlignment="CENTER" wrapText="true" />
-                        <Button fx:id="buttonProgramarCitasTecnicas" alignment="CENTER" onAction="#clickProgramarCitasTecnicas" prefHeight="150.0" prefWidth="205.0" styleClass="btn-actualizarProveedor" text="Programar Cita Técnica" textAlignment="CENTER" wrapText="true" />
-                  <Button fx:id="buttonHistorialServicios" alignment="CENTER" onAction="#clickHistorialServicios" prefHeight="150.0" prefWidth="205.0" styleClass="btn-registrarOrdenPago" text="Historial de Servicios" textAlignment="CENTER" wrapText="true" />
-                  <Button fx:id="buttonFiltrarHistorialServicios" alignment="CENTER" onAction="#clickFiltrarHistorialServicios" prefHeight="150.0" prefWidth="205.0" styleClass="btn-registrarOrdenPago" text="Filtrar Historial de Servicios" textAlignment="CENTER" wrapText="true" />
-                        <Button fx:id="buttonRegistrarCliente" alignment="CENTER" onAction="#clickRegistrarCliente" prefHeight="150.0" prefWidth="205.0" styleClass="btn-registrarOrdenPago" text="Registrar Cliente" textAlignment="CENTER" wrapText="true" />
-                        <Button fx:id="buttonRegistrarEquipoCliente" alignment="CENTER" onAction="#clickRegistrarEquipoCliente" prefHeight="150.0" prefWidth="205.0" styleClass="btn-consultarProveedor" text="Registrar Equipo del Cliente" textAlignment="CENTER" wrapText="true" />
-                        <Button fx:id="buttonModificarCitasTecnicas" alignment="CENTER" onAction="#clicModificarCitasTecnicas" prefHeight="150.0" prefWidth="205.0" styleClass="btn-registrarProveedor" text="Modificar Cita Técnica" textAlignment="CENTER" wrapText="true" />
+                        <Button fx:id="buttonConsultarCliente" alignment="CENTER" onAction="#clickConsultarCliente" prefHeight="150.0" prefWidth="205.0" styleClass="btn-consultarCliente" text="Consultar Cliente" textAlignment="CENTER" wrapText="true" />
+                        <Button fx:id="buttonConsultarCitaProgramadas" alignment="CENTER" onAction="#clickConsultarCitaProgramadas" prefHeight="150.0" prefWidth="205.0" styleClass="btn-consultarCitaTecnica" text="Consultar Citas Programadas" textAlignment="CENTER" wrapText="true" />
+                        <Button fx:id="buttonProgramarCitasTecnicas" alignment="CENTER" onAction="#clickProgramarCitasTecnicas" prefHeight="150.0" prefWidth="205.0" styleClass="btn-programarCitaTecnica" text="Programar Cita Técnica" textAlignment="CENTER" wrapText="true" />
+                  <Button fx:id="buttonHistorialServicios" alignment="CENTER" onAction="#clickHistorialServicios" prefHeight="150.0" prefWidth="205.0" styleClass="btn-historialServicio" text="Historial de Servicios" textAlignment="CENTER" wrapText="true" />
+                  <Button fx:id="buttonFiltrarHistorialServicios" alignment="CENTER" onAction="#clickFiltrarHistorialServicios" prefHeight="150.0" prefWidth="205.0" styleClass="btn-filtrarCita" text="Filtrar Historial de Servicios" textAlignment="CENTER" wrapText="true" />
+                        <Button fx:id="buttonRegistrarCliente" alignment="CENTER" onAction="#clickRegistrarCliente" prefHeight="150.0" prefWidth="205.0" styleClass="btn-RegistrarCliente" text="Registrar Cliente" textAlignment="CENTER" wrapText="true" />
+                        <Button fx:id="buttonRegistrarEquipoCliente" alignment="CENTER" onAction="#clickRegistrarEquipoCliente" prefHeight="150.0" prefWidth="205.0" styleClass="btn-registrarEquipoCliente" text="Registrar Equipo del Cliente" textAlignment="CENTER" wrapText="true" />
+                        <Button fx:id="buttonConsultarEquiposCliente" alignment="CENTER" onAction="#clickConsultarEquiposCliente" prefHeight="150.0" prefWidth="205.0" styleClass="btn-consultarEquipoCliente" text="Consultar Equipos del Cliente" textAlignment="CENTER" wrapText="true" />
+                        <Button fx:id="buttonActualizarDatosCliente" alignment="CENTER" onAction="#clickActualizarDatosCliente" prefHeight="150.0" prefWidth="205.0" styleClass="btn-actualizarDatosCliente" text="Actualizar Datos Cliente" textAlignment="CENTER" wrapText="true" />
 
                     </children>
                 </TilePane>
                 <Button fx:id="buttonRegresar" layoutX="29.0" layoutY="579.0" mnemonicParsing="false" onAction="#clickRegresar" prefHeight="13.0" prefWidth="97.0" text="Regresar" />
+                <Label fx:id="labelToast" layoutX="900.0" layoutY="579.0" prefHeight="56.0" prefWidth="315.0" styleClass="toast-message" text="s" visible="false" />
 
             </children>
         </Pane>

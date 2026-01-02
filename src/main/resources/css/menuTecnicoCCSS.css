@@ -32,7 +32,7 @@
 
 #textBienvenida {
     -fx-text-fill: #FFFFFF;
-    -fx-font-size: 60px;
+    -fx-font-size: 50px;
     -fx-font-weight: bold;
     -fx-font-style: italic;
     -fx-alignment: center;
@@ -46,7 +46,7 @@
 
 .label {
     -fx-text-fill: #FFFFFF;
-    -fx-font-size: 25px;
+    -fx-font-size: 20px;
     -fx-font-weight: bold;
 
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.85), 8, 0.3, 0, 2);
@@ -84,8 +84,18 @@
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 4, 0.2, 0, 1);
 }
 
-.btn-proveedor {
-    -fx-background-image: url("/Imagenes/iconoProveedor.png");
+
+.btn-cliente {
+    -fx-background-image: url("/Imagenes/iconoCliente.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center 10;
+    -fx-background-size: 40px 40px;
+
+    -fx-padding: 16 10 16 10;
+}
+
+.btn-mantenimiento {
+    -fx-background-image: url("/Imagenes/iconoMantenimiento.png");
     -fx-background-repeat: no-repeat;
     -fx-background-position: center 10;
     -fx-background-size: 40px 40px;
@@ -141,4 +151,10 @@
     -fx-background-color: rgba(30, 60, 114, 1);
 }
 
-
+.tooltip {
+    -fx-background-color: #263238;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 12px;
+    -fx-background-radius: 8;
+    -fx-padding: 6 10 6 10;
+}

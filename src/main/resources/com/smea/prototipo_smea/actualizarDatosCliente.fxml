@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane fx:id="paneFondo" stylesheets="@../../../css/estilo-consultar-proveedor.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.actualizarDatosClienteController">
+    <children>
+        <Pane fx:id="paneContenedor" layoutX="110.0" layoutY="63.0" prefHeight="600.0" prefWidth="1250.0" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="63.0">
+            <children>
+                <Label fx:id="labelBienvenida" layoutX="453.0" layoutY="21.0" text="Actualizar Datos" />
+                <Label fx:id="labelDatosPersonales" layoutX="104.0" layoutY="338.0" text="Datos del cliente: " />
+                <Label fx:id="labelTelefono" layoutX="273.0" layoutY="512.0" text="Teléfono:" />
+                <Label fx:id="labelCorreo" layoutX="184.0" layoutY="453.0" prefHeight="30.0" prefWidth="187.0" text="Correo Electrónico:" />
+                <TextField fx:id="textfieldCorreo" layoutX="378.0" layoutY="449.0" prefHeight="41.0" prefWidth="618.0" />
+                <Label fx:id="labelDireccion" layoutX="153.0" layoutY="390.0" text="Dirección Domiciliaria:" />
+                <TextField fx:id="textfieldDireccion" layoutX="381.0" layoutY="387.0" prefHeight="41.0" prefWidth="621.0" />
+                <TextField fx:id="textfieldTelefono" layoutX="382.0" layoutY="507.0" prefHeight="41.0" prefWidth="184.0" />
+                <Line endX="393.20703125" layoutX="535.0" layoutY="109.0" startX="-138.24032592773438" stroke="WHITE" strokeWidth="5.0" />
+            <Label fx:id="labeCliente" layoutX="375.0" layoutY="131.0" text="Buscar cliente por:" />
+            <ChoiceBox fx:id="chiceBoxCliente" layoutX="552.0" layoutY="125.0" prefHeight="43.0" prefWidth="279.0" />
+            <Label fx:id="labelCedulaCliente" layoutX="387.0" layoutY="258.0" text="Ingrese la cedula:" />
+            <TextField fx:id="textfieldCedulCliente" layoutX="552.0" layoutY="252.0" prefHeight="41.0" prefWidth="227.0" />
+            <Label fx:id="labelNombreCliente" layoutX="290.0" layoutY="197.0" text="Ingrese el nombre:" />
+            <TextField fx:id="textFieldNombreCliente" layoutX="479.0" layoutY="191.0" prefHeight="41.0" prefWidth="406.0" />
+            <Button fx:id="buttonBuscarCedula" layoutX="789.0" layoutY="252.0" mnemonicParsing="false" onAction="#buscarCliente" text="Buscar" />
+            <Button fx:id="buttonBuscarNombre" layoutX="898.0" layoutY="191.0" mnemonicParsing="false" onAction="#buscarCliente" text="Buscar" />
+            <Line endX="972.52587890625" endY="-1.52587890625E-5" layoutX="212.0" layoutY="318.0" startX="-138.24032592773438" stroke="WHITE" strokeWidth="5.0" />
+            </children>
+        </Pane>
+        <Button fx:id="buttonRegresar" layoutX="138.0" layoutY="673.0" mnemonicParsing="false" onAction="#clikcRegresarMenu" text="Regresar" />
+        <Button fx:id="buttonGuardarCambios" layoutX="1273.0" layoutY="675.0" mnemonicParsing="false" onAction="#clickguardarCambios" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Guardar Cambios" />
+      <Button fx:id="buttonGuardarCambios1" layoutX="687.0" layoutY="676.0" mnemonicParsing="false" onAction="#clickRestaurarValores" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Restaurar Valores" />
+    </children>
+</AnchorPane>

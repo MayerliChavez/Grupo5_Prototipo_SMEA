@@ -55,6 +55,8 @@ public class actualizarDatosProveedorController
                 data.getValue().estadoProperty());
 
         cargarDatosSimulados();
+
+        textFielNombreProveedor.setOnAction(e->buttonBuscar.requestFocus());
     }
 
     // ================== DATOS SIMULADOS ==================
@@ -74,7 +76,11 @@ public class actualizarDatosProveedorController
     @FXML
     private void buscarProveedor(ActionEvent event) {
         String texto = textFielNombreProveedor.getText().trim().toLowerCase();
-
+        mostrarAlerta(
+                "Sin resultados",
+                "Ingrese un nombre para realizar la busqueda",
+                Alert.AlertType.INFORMATION
+        );
         if (texto.isEmpty()) {
             tableViewTablaContenido.setItems(listaProveedores);
             return;
@@ -88,7 +94,16 @@ public class actualizarDatosProveedorController
             }
         }
 
-        tableViewTablaContenido.setItems(filtrado);
+        if(filtrado.isEmpty()){
+            mostrarAlerta(
+                    "Sin resultados",
+                    "No se encontraron proveedores con los datos ingresados",
+                    Alert.AlertType.INFORMATION
+            );
+            tableViewTablaContenido.setItems(listaProveedores);
+        }else{
+            tableViewTablaContenido.setItems(filtrado);
+        }
     }
 
     // ================== ACTUALIZAR ==================

@@ -43,15 +43,29 @@ public class registrarOrdenPagoController
         datePickerFechaEmision.setValue(LocalDate.now());
         datePickerFechaVigente.setValue(LocalDate.now().plusDays(30));
 
+        textFieldProveedor.setOnAction(e -> textFieldMonto.requestFocus());
+        textFieldMonto.setOnAction(e -> datePickerFechaEmision.requestFocus());
+        datePickerFechaEmision.setOnAction(e -> datePickerFechaVigente.requestFocus());
+        datePickerFechaVigente.setOnAction(e -> textFieldTipoPago.requestFocus());
+        textFieldTipoPago.setOnAction(e -> textFieldTiempoEntrega.requestFocus());
+        textFieldTiempoEntrega.setOnAction(e -> textAreaObservaciones.requestFocus());
+        textAreaObservaciones.setOnKeyPressed(e -> {
+            if (e.getCode().toString().equals("ENTER")) {
+                buttonCrearOrdenPago.requestFocus();
+            }
+        });
+
         configurarTabulacion();
     }
 
     private void configurarTabulacion() {
         configurarTab(textFieldProveedor, textFieldMonto);
         configurarTab(textFieldMonto, datePickerFechaEmision);
-        configurarTab(datePickerFechaEmision, textFieldTipoPago);
+        configurarTab(datePickerFechaEmision, datePickerFechaVigente);
+        configurarTab(datePickerFechaVigente, textFieldTipoPago);
         configurarTab(textFieldTipoPago, textFieldTiempoEntrega);
         configurarTab(textFieldTiempoEntrega, textAreaObservaciones);
+        configurarTab(textFieldMonto, buttonCrearOrdenPago);
     }
 
     private void configurarTab(Control actual, Control siguiente) {

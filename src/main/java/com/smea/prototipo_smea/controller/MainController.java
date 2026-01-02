@@ -22,6 +22,15 @@ public class MainController {
     public String getRolUsuario() {
         return rolUsuario;
     }
+    private Object datoTemporal;
+
+    public void setDatoTemporal(Object dato) {
+        this.datoTemporal = dato;
+    }
+
+    public Object getDatoTemporal() {
+        return datoTemporal;
+    }
 
     public void saver(String fxml) {
         try {

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneFondo" stylesheets="@../../../css/estilos-lista-proveedores.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.historialServiciosController">
+    <children>
+        <Pane fx:id="paneContenedor" layoutX="110.0" layoutY="63.0" prefHeight="600.0" prefWidth="1250.0" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="63.0">
+            <children>
+                <Label fx:id="labelBienvenida" layoutX="543.0" layoutY="31.0" text="Historial">
+                    <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                    </font>
+                </Label>
+            <TableView fx:id="tableViewClientes" layoutX="61.0" layoutY="160.0" prefHeight="327.0" prefWidth="1203.0">
+               <columns>
+                  <TableColumn fx:id="tableColumnNombre" prefWidth="188.78192901611328" text="Fecha del servicio" />
+                  <TableColumn fx:id="tableColumnTipoEquipo" prefWidth="238.27679443359375" text="Equipo atendido" />
+                  <TableColumn fx:id="tableColumnNumeroSerie" prefWidth="215.32846069335938" text="Tipo de servicio" />
+                  <TableColumn fx:id="tableColumnTecnico" prefWidth="265.47137451171875" text="Técnico" />
+                   <TableColumn fx:id="tableColumnEstadoServicio" prefWidth="169.9326171875" text="Estado" />
+                   <TableColumn fx:id="tableColumnCosto" prefWidth="122.0673828125" text="Costo($)" />
+               </columns>
+            </TableView>
+            </children>
+        </Pane>
+        <Button fx:id="buttonRegresar" layoutX="128.0" layoutY="680.0" mnemonicParsing="false" onAction="#regresarModuloCliente" text="Regresar" />
+        <Button fx:id="buttonVerDetalle" layoutX="1244.0" layoutY="681.0" mnemonicParsing="false" onAction="#verDetalleProveedor" text="Generar Reporte PDF" />
+    </children>
+</AnchorPane>

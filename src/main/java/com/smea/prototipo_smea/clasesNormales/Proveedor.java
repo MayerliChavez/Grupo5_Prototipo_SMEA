@@ -5,6 +5,7 @@ import javafx.beans.property.SimpleStringProperty;
 public class Proveedor {
 
 
+
     private final SimpleStringProperty nombre;
     private final SimpleStringProperty razonSocial;
     private final SimpleStringProperty ruc;
@@ -33,6 +34,30 @@ public class Proveedor {
 
     public void setEstado(String nuevoEstado) {
         estado.set(nuevoEstado);
+    }
+
+    public void setTelefono(String nuevoTelefono) {
+        telefono.set(nuevoTelefono);
+    }
+
+    public void setEmail(String nuevoEmail) {
+        email.set(nuevoEmail);
+    }
+
+    public void setDireccion(String nuevoDireccion) {
+        direccion.set(nuevoDireccion);
+    }
+
+    public void setRazonSocial(String nuevoRazonSocial) {
+        razonSocial.set(nuevoRazonSocial);
+    }
+
+    public void setRuc(String nuevoRuc) {
+        ruc.set(nuevoRuc);
+    }
+
+    public void setNombre(String nuevoNombre) {
+        nombre.set(nuevoNombre);
     }
 
     public SimpleStringProperty nombreProperty() { return nombre; }

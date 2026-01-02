@@ -46,12 +46,30 @@ public class registrarProductoQueOfreceProveedorController
                 "Accesorios"
         );
 
-        // Orden de TAB / ENTER
+        chiceBoxProveedor.setOnAction(e -> textFieldProducto.requestFocus());
         textFieldProducto.setOnAction(e -> textFieldCosto.requestFocus());
-        textFieldCosto.setOnAction(e -> textAreaDescripcion.requestFocus());
+        textFieldCosto.setOnAction(e -> choicEBoxCategoria.requestFocus());
+        choicEBoxCategoria.setOnAction(e->textAreaDescripcion.requestFocus());
         textAreaDescripcion.setOnKeyPressed(e -> {
             if (e.getCode().toString().equals("ENTER")) {
-                choicEBoxCategoria.requestFocus();
+                buttonRegistrarProducto.requestFocus();
+            }
+        });
+    }
+
+    private void configurarTabulacion() {
+        configurarTab(chiceBoxProveedor, textFieldProducto);
+        configurarTab(textFieldProducto, textFieldCosto);
+        configurarTab(textFieldCosto, choicEBoxCategoria);
+        configurarTab(choicEBoxCategoria, textAreaDescripcion);
+        configurarTab(textAreaDescripcion, buttonRegistrarProducto);
+    }
+
+    private void configurarTab(Control actual, Control siguiente) {
+        actual.setOnKeyPressed(event -> {
+            if (event.getCode() == javafx.scene.input.KeyCode.TAB) {
+                siguiente.requestFocus();
+                event.consume();
             }
         });
     }

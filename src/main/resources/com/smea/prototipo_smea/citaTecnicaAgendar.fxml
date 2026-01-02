@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane fx:id="paneFondo" stylesheets="@../../../css/estilos-orden-pago.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.agendarCitaTecnicaController">
+    <children>
+        <Pane fx:id="paneContenedor" layoutX="110.0" layoutY="63.0" prefHeight="600.0" prefWidth="1250.0" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="63.0">
+            <children>
+                <Label fx:id="labelBienvenida" layoutX="382.0" layoutY="37.0" text="Agendar Cita Técnica" />
+                <Label fx:id="labelDatosPersonales" layoutX="81.0" layoutY="130.0" text="Datos del cliente" />
+                <Label fx:id="labelNombre" layoutX="315.0" layoutY="187.0" text="Nombre/s:" />
+                <TextField fx:id="textfieldNombre" layoutX="427.0" layoutY="181.0" prefHeight="41.0" prefWidth="335.0" />
+                <Label fx:id="labelTipoServicio" layoutX="745.0" layoutY="470.0" text="Tipo de servicio:" />
+                <Label fx:id="labelTelefono" layoutX="862.0" layoutY="252.0" text="Teléfono:" />
+                <TextField fx:id="textfieldCedulaRUC" layoutX="916.0" layoutY="181.0" prefHeight="41.0" prefWidth="180.0" />
+                <Label fx:id="labelTecnicoAsignado" layoutX="144.0" layoutY="469.0" text="Técnico asignado:" />
+                <Label fx:id="labelDireccion" layoutX="190.0" layoutY="250.0" text="Dirección Domiciliaria: " />
+                <TextField fx:id="textfieldDireccion" layoutX="418.0" layoutY="244.0" prefHeight="41.0" prefWidth="407.0" />
+                <Label fx:id="labelCedulaRUC" layoutX="791.0" layoutY="187.0" prefHeight="30.0" prefWidth="123.0" text="Cédula/RUC:" />
+                <TextField fx:id="textfieldTelefono" layoutX="955.0" layoutY="246.0" prefHeight="41.0" prefWidth="196.0" />
+                <Line endX="708.9320068359375" layoutX="479.0" layoutY="143.0" startX="-227.44070434570312" stroke="WHITE" strokeWidth="5.0" />
+            <Label fx:id="labelDatosPersonales1" layoutX="73.0" layoutY="333.0" text="Datos de la cita" />
+            <Line endX="1076.9466552734375" endY="-3.0517578125E-5" layoutX="120.0" layoutY="347.0" startX="136.685546875" stroke="WHITE" strokeWidth="5.0" />
+            <Label fx:id="labelFecha" layoutX="299.0" layoutY="394.0" text="Fecha:" />
+            <DatePicker fx:id="dataPickerFecha" layoutX="371.0" layoutY="388.0" />
+            <Label fx:id="labelHora" layoutX="712.0" layoutY="395.0" text="Hora:" />
+            <ChoiceBox fx:id="choiseBoxHora" layoutX="795.0" layoutY="388.0" prefHeight="43.0" prefWidth="250.0" />
+            <ChoiceBox fx:id="choiseBoxTipoServicio" layoutX="936.0" layoutY="462.0" prefHeight="43.0" prefWidth="260.0" />
+            <ChoiceBox fx:id="choiseBoxTecnicoAsignado" layoutX="333.0" layoutY="463.0" prefHeight="43.0" prefWidth="325.0" />
+            </children>
+        </Pane>
+        <Button fx:id="buttonRegresar" layoutX="142.0" layoutY="673.0" mnemonicParsing="false" onAction="#clikcRegresarMenuPrincipal" text="Regresar" />
+        <Button fx:id="buttonAgendarCita" layoutX="1253.0" layoutY="678.0" mnemonicParsing="false" onAction="#clickCrearCliente" text="Agendar Cita" />
+    </children>
+</AnchorPane>

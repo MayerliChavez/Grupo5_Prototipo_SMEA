@@ -30,7 +30,7 @@
                </columns>
             </TableView>
             <Label fx:id="labelIngresarNombreProveedor" layoutX="246.0" layoutY="160.0" text="Ingrese el nombre del proveedor:" />
-            <Button fx:id="buttonBuscar" layoutX="1105.0" layoutY="167.0" mnemonicParsing="false" onAction="#buscarProveedor" text="Buscar" />
+            <Button fx:id="buttonBuscar" layoutX="1081.0" layoutY="159.0" mnemonicParsing="false" onAction="#buscarProveedor" text="Buscar" />
             <Line endX="567.5045166015625" layoutX="452.0" layoutY="126.0" startX="-100.0" stroke="WHITE" strokeWidth="5.0" />
          </children>
       </Pane>

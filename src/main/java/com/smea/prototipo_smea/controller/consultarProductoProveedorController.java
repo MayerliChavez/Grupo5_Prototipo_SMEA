@@ -55,6 +55,8 @@ public class consultarProductoProveedorController
 
         cargarDatosSimulados();
 
+        textFielNombreProveedor.setOnAction(e->buttonBuscar.requestFocus());
+
         buttonEstado.setVisible(false); // oculto por defecto
     }
 
@@ -80,6 +82,11 @@ public class consultarProductoProveedorController
 
         if (texto.isEmpty()) {
             tableViewTablaContenido.setItems(listaProductos);
+            mostrarAlerta(
+                    "Sin resultados",
+                    "Ingrese un producto para buscar",
+                    Alert.AlertType.INFORMATION
+            );
             return;
         }
 
@@ -91,7 +98,16 @@ public class consultarProductoProveedorController
             }
         }
 
-        tableViewTablaContenido.setItems(filtrado);
+        if(filtrado.isEmpty()){
+            mostrarAlerta(
+                    "Sin resultados",
+                    "No se encontraron el producto con los datos ingresados",
+                    Alert.AlertType.INFORMATION
+            );
+            tableViewTablaContenido.setItems(listaProductos);
+        }else{
+            tableViewTablaContenido.setItems(filtrado);
+        }
     }
 
     // ================== VER DETALLE (ALERT) ==================

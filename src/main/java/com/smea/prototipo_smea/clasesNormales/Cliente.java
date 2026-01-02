@@ -41,6 +41,46 @@ public class Cliente {
         return estado.get();
     }
 
+    public String getDireccion() {
+        return direccion.get();
+    }
+
+    public String getApellido() {
+        return apellido.get();
+    }
+
+    public String getEmail() {
+        return email.get();
+    }
+
+    public void setEstado(String estado) {
+        this.estado.set(estado);
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre.set(nombre);
+    }
+
+    public void setCedulaRuc(String cedulaRuc) {
+        this.cedulaRuc.set(cedulaRuc);
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono.set(telefono);
+    }
+
+    public void  setApellido(String apellido) {
+        this.apellido.set(apellido);
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion.set(direccion);
+    }
+
+    public void setEmail(String email) {
+        this.email.set(email);
+    }
+
     // ===== Properties =====
     public StringProperty nombreProperty() {
         return nombre;

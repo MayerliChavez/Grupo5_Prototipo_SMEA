@@ -32,7 +32,6 @@ public class moduloProveedorController
     // ================== INIT ==================
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        deshabilitarTodos();
         cargarIconos();
     }
 
@@ -174,14 +173,7 @@ public class moduloProveedorController
 
     // ================== PERMISOS ==================
     private void configurarPermisos() {
-        deshabilitarTodos();
-
         String rol = mainController.getRolUsuario();
-
-        if ("Administrador".equalsIgnoreCase(rol)) {
-            habilitarTodos();
-            return;
-        }
 
         if ("Representante de Cobranzas".equalsIgnoreCase(rol)) {
 
@@ -192,36 +184,23 @@ public class moduloProveedorController
             buttonVisualizarHistorialPagos.setDisable(false);
             buttonVisualizarProveedores.setDisable(false);
 
-            Tooltip sinPermiso = new Tooltip("No tiene permisos para esta acción");
-
-            buttonRegistrarProveedor.setTooltip(sinPermiso);
-            buttonRegistrarProducto.setTooltip(sinPermiso);
-            buttonActualizarDatosProveedor.setTooltip(sinPermiso);
+            bloquearBoton(buttonRegistrarProveedor);
+            bloquearBoton(buttonRegistrarProducto);
+            bloquearBoton(buttonConsultarOrdenPago);
         }
     }
 
-    private void deshabilitarTodos() {
-        buttonRegistrarProveedor.setDisable(true);
-        buttonRegistrarOrdenPago.setDisable(true);
-        buttonRegistrarProducto.setDisable(true);
-        buttonActualizarDatosProveedor.setDisable(true);
-        buttonConsultarDatosProveedor.setDisable(true);
-        buttonConsultarProductoProveedor.setDisable(true);
-        buttonConsultarOrdenPago.setDisable(true);
-        buttonVisualizarHistorialPagos.setDisable(true);
-        buttonVisualizarProveedores.setDisable(true);
-    }
+    private void bloquearBoton(Button boton) {
 
-    private void habilitarTodos() {
-        buttonRegistrarProveedor.setDisable(false);
-        buttonRegistrarOrdenPago.setDisable(false);
-        buttonRegistrarProducto.setDisable(false);
-        buttonActualizarDatosProveedor.setDisable(false);
-        buttonConsultarDatosProveedor.setDisable(false);
-        buttonConsultarProductoProveedor.setDisable(false);
-        buttonConsultarOrdenPago.setDisable(false);
-        buttonVisualizarHistorialPagos.setDisable(false);
-        buttonVisualizarProveedores.setDisable(false);
+        Tooltip tooltip = new Tooltip("Acceso restringido");
+        tooltip.setShowDelay(javafx.util.Duration.millis(300));
+        tooltip.setHideDelay(javafx.util.Duration.millis(0));
+
+        boton.setTooltip(tooltip);
+        boton.setOpacity(0.6); // efecto visual de bloqueado
+
+        // Bloquear acción
+        boton.addEventFilter(ActionEvent.ACTION, event -> event.consume());
     }
 
     // ================== ACCIONES ==================

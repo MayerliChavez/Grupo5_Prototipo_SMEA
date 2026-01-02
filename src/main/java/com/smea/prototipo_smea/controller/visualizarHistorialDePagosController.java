@@ -62,6 +62,8 @@ public class visualizarHistorialDePagosController
         tableColumnTipoPago.setCellValueFactory(data ->
                 data.getValue().tipoPagoProperty());
 
+        textFielNombreProveedor.setOnAction(e->buttonBuscar.requestFocus());
+
         cargarDatosSimulados();
     }
 
@@ -95,6 +97,11 @@ public class visualizarHistorialDePagosController
 
         if (texto.isEmpty()) {
             tableViewOrdenPago.setItems(listaOrdenes);
+            mostrarAlerta(
+                    "Sin resultados",
+                    "Ingrese un nombre para realizar la busqueda",
+                    Alert.AlertType.INFORMATION
+            );
             return;
         }
 
@@ -106,7 +113,16 @@ public class visualizarHistorialDePagosController
             }
         }
 
-        tableViewOrdenPago.setItems(filtrado);
+        if(filtrado.isEmpty()){
+            mostrarAlerta(
+                    "Sin resultados",
+                    "No se encontraron proveedores con los datos ingresados",
+                    Alert.AlertType.INFORMATION
+            );
+            tableViewOrdenPago.setItems(listaOrdenes);
+        }else{
+            tableViewOrdenPago.setItems(filtrado);
+        }
     }
 
     // ================== VER DETALLE ==================

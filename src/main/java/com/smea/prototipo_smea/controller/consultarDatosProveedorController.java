@@ -44,6 +44,8 @@ public class consultarDatosProveedorController
         tableColumnRUC.setCellValueFactory(d -> d.getValue().rucProperty());
         tableColumnEstado.setCellValueFactory(d -> d.getValue().estadoProperty());
 
+        textFielNombreProveedor.setOnAction(e->buttonBuscar.requestFocus());
+
         cargarDatosSimulados();
     }
 
@@ -75,6 +77,11 @@ public class consultarDatosProveedorController
 
         if (texto.isEmpty()) {
             tableViewTablaContenido.setItems(listaProveedores);
+            mostrarAlerta(
+                    "Sin resultados",
+                    "No se encontraron proveedores con los datos ingresados",
+                    Alert.AlertType.INFORMATION
+            );
             return;
         }
 
@@ -86,7 +93,16 @@ public class consultarDatosProveedorController
             }
         }
 
-        tableViewTablaContenido.setItems(filtrado);
+        if(filtrado.isEmpty()){
+            mostrarAlerta(
+                    "Sin resultados",
+                    "No se encontraron proveedores con los datos ingresados",
+                    Alert.AlertType.INFORMATION
+            );
+            tableViewTablaContenido.setItems(listaProveedores);
+        }else{
+            tableViewTablaContenido.setItems(filtrado);
+        }
     }
 
     @FXML

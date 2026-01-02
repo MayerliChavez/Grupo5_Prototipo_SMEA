@@ -37,12 +37,30 @@ public class visualizarListaProveedoresController
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
+        configurarTabulacion();
+
         tableColumnNombre.setCellValueFactory(d -> d.getValue().nombreProperty());
         tableColumnRazonSocial.setCellValueFactory(d -> d.getValue().razonSocialProperty());
         tableColumnRUC.setCellValueFactory(d -> d.getValue().rucProperty());
         tableColumnEstado.setCellValueFactory(d -> d.getValue().estadoProperty());
 
+        textFielNombreProveedor.setOnAction(e->buttonBuscar.requestFocus());
+
         cargarDatosSimulados();
+
+    }
+
+    private void configurarTabulacion() {
+        configurarTab(textFielNombreProveedor, buttonBuscar);
+    }
+
+    private void configurarTab(Control actual, Control siguiente) {
+        actual.setOnKeyPressed(event -> {
+            if (event.getCode() == javafx.scene.input.KeyCode.TAB) {
+                siguiente.requestFocus();
+                event.consume();
+            }
+        });
     }
 
     // ================== PERMISOS ==================
@@ -71,6 +89,11 @@ public class visualizarListaProveedoresController
 
         if (texto.isEmpty()) {
             tableViewTablaContenido.setItems(listaProveedores);
+            mostrarAlerta(
+                    "Sin resultados",
+                    "Ingrese un nombre para buscar",
+                    Alert.AlertType.INFORMATION
+            );
             return;
         }
 
@@ -82,7 +105,16 @@ public class visualizarListaProveedoresController
             }
         }
 
+        if(filtrado.isEmpty()){
+            mostrarAlerta(
+                    "Sin resultados",
+                    "No se encontraron clientes con los datos ingresados",
+                    Alert.AlertType.INFORMATION
+            );
+            tableViewTablaContenido.setItems(listaProveedores);
+        }else{
         tableViewTablaContenido.setItems(filtrado);
+        }
     }
 
     @FXML

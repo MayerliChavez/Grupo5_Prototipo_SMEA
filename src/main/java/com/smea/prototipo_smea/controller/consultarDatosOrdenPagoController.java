@@ -49,6 +49,7 @@ public class consultarDatosOrdenPagoController
         tableColumnMonto.setCellValueFactory(data ->
                 data.getValue().montoProperty().asObject());
 
+        textFielCodigoOrdenPago.setOnAction(e -> buttonBuscar.requestFocus());
         // 🔸 Cargar datos de prueba
         cargarDatosSimulados();
     }
@@ -69,6 +70,11 @@ public class consultarDatosOrdenPagoController
 
         if (codigo.isEmpty()) {
             tableViewTablaContenido.setItems(listaOrdenes);
+            mostrarAlerta(
+                    "Sin resultados",
+                    "Ingrese un codigo para buscar",
+                    Alert.AlertType.INFORMATION
+            );
             return;
         }
 
@@ -88,7 +94,16 @@ public class consultarDatosOrdenPagoController
             );
         }
 
-        tableViewTablaContenido.setItems(filtrado);
+        if(filtrado.isEmpty()){
+            mostrarAlerta(
+                    "Sin resultados",
+                    "No se encontraron proveedores con los datos ingresados",
+                    Alert.AlertType.INFORMATION
+            );
+            tableViewTablaContenido.setItems(listaOrdenes);
+        }else{
+            tableViewTablaContenido.setItems(filtrado);
+        }
     }
 
     @FXML

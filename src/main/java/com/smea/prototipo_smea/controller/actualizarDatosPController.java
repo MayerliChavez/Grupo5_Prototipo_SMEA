@@ -1,10 +1,12 @@
 package com.smea.prototipo_smea.controller;
 
+import com.smea.prototipo_smea.clasesNormales.Proveedor;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Control;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
@@ -36,6 +38,30 @@ public class actualizarDatosPController implements Initializable, ControladorIny
     public void initialize(URL url, ResourceBundle resourceBundle) {
         cargarDatosSimulados();
         bloquearCamposNoEditables();
+        configurarTabulacion();
+
+        textfieldNombre.setOnAction(e -> textfieldTelefono.requestFocus());
+        textfieldTelefono.setOnAction(e -> textfielRazonSocial.requestFocus());
+        textfielRazonSocial.setOnAction(e -> textfieldDireccion.requestFocus());
+        textfieldDireccion.setOnAction(e -> textfieldCorreo.requestFocus());
+        textfieldCorreo.setOnAction(e -> buttonGuardarCambios.requestFocus());
+    }
+
+    private void configurarTabulacion() {
+        configurarTab(textfieldNombre, textfieldTelefono);
+        configurarTab(textfieldTelefono, textfielRazonSocial);
+        configurarTab(textfielRazonSocial, textfieldDireccion);
+        configurarTab(textfieldDireccion, textfieldCorreo);
+        configurarTab(textfieldCorreo, buttonGuardarCambios);
+    }
+
+    private void configurarTab(Control actual, Control siguiente) {
+        actual.setOnKeyPressed(event -> {
+            if (event.getCode() == javafx.scene.input.KeyCode.TAB) {
+                siguiente.requestFocus();
+                event.consume();
+            }
+        });
     }
 
     // ================== DATOS SIMULADOS ==================
@@ -52,7 +78,6 @@ public class actualizarDatosPController implements Initializable, ControladorIny
 
     private void bloquearCamposNoEditables() {
         textfieldRUC.setEditable(false);
-        textfieldCorreo.setEditable(false);
     }
 
     // ================== GUARDAR CAMBIOS ==================
@@ -63,7 +88,8 @@ public class actualizarDatosPController implements Initializable, ControladorIny
         if (textfieldNombre.getText().isBlank()
                 || textfielRazonSocial.getText().isBlank()
                 || textfieldTelefono.getText().isBlank()
-                || textfieldDireccion.getText().isBlank()) {
+                || textfieldDireccion.getText().isBlank()
+                || textfieldCorreo.getText().isBlank()) {
 
             mostrarAlerta(
                     "Campos incompletos",
@@ -73,12 +99,59 @@ public class actualizarDatosPController implements Initializable, ControladorIny
             return;
         }
 
+        if(!verificarCampos()){
+            return;
+        }
+
         // Aquí luego va la lógica de BD
         mostrarAlerta(
                 "Datos actualizados",
                 "La información del proveedor se actualizó correctamente",
                 Alert.AlertType.INFORMATION
         );
+    }
+
+    private boolean verificarCampos(){
+        String correo = textfieldCorreo.getText();
+        String RUC = textfieldRUC.getText();
+        String telefono =  textfieldTelefono.getText();
+
+        if (!textfieldCorreo.getText().contains("@")) {
+            mostrarAlerta(
+                    "Correo electrónico inválido",
+                    "Ingrese un correo electrónico válido",
+                    Alert.AlertType.WARNING
+            );
+            return false;
+        }
+
+        if (RUC.length() != 13 || !RUC.endsWith("001")) {
+            mostrarAlerta(
+                    "RUC inválido",
+                    "El RUC debe tener 13 dígitos y terminar en 001",
+                    Alert.AlertType.WARNING
+            );
+            return false;
+        }
+
+        if (!telefono.matches("\\d{10}") || !validarSoloNumeros(telefono)) {
+            mostrarAlerta(
+                    "Teléfono inválido",
+                    "El teléfono tiene caracteres no permitidos",
+                    Alert.AlertType.WARNING
+            );
+            return false;
+        }
+
+        return true;
+    }
+
+    private boolean validarSoloNumeros(String cadena) {
+
+        if (!cadena.matches("\\d+")) {
+            return false;
+        }
+        return true;
     }
 
     // ================== NAVEGACIÓN ==================

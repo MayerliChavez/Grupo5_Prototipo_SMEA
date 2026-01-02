@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneFondo" stylesheets="@../../../css/estilo-consultar-proveedor.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.consultarCitasProgramadasController">
+    <children>
+        <Pane fx:id="paneContenedor" layoutX="110.0" layoutY="63.0" prefHeight="600.0" prefWidth="1250.0" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="63.0">
+            <children>
+                <Label fx:id="labelBienvenida" layoutX="279.0" layoutY="18.0" text="Consultar Citas Programadas">
+                    <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                    </font>
+                </Label>
+                <Label fx:id="labeCliente" layoutX="461.0" layoutY="133.0" text="Buscar cliente por:" />
+                <ChoiceBox fx:id="chiceBoxCliente" layoutX="638.0" layoutY="127.0" prefHeight="43.0" prefWidth="279.0" />
+                <Label fx:id="labelCedulaCliente" layoutX="92.0" layoutY="191.0" text="Ingrese la cedula del cliente:" />
+                <TextField fx:id="textfieldCedulCliente" layoutX="361.0" layoutY="185.0" prefHeight="41.0" prefWidth="206.0" />
+                <Button fx:id="buttonBuscarCodigo" layoutX="583.0" layoutY="232.0" mnemonicParsing="false" onAction="#buscarCliente" text="Buscar" />
+                <TableView fx:id="tableViewClientes" layoutX="146.0" layoutY="302.0" prefHeight="256.0" prefWidth="1011.0">
+                    <columns>
+                        <TableColumn fx:id="tableColumnCodigo" prefWidth="135.98309326171875" text="Código" />
+                        <TableColumn fx:id="tableColumnCliente" prefWidth="401.6169128417969" text="Cliente" />
+                        <TableColumn fx:id="tableColumnFecha" prefWidth="175.6419677734375" text="Fecha" />
+                        <TableColumn fx:id="tableColumnHora" prefWidth="143.972900390625" text="Hora" />
+                  <TableColumn fx:id="buttonEstado" prefWidth="154.38983154296875" text="Estado" />
+                    </columns>
+                </TableView>
+                <Label fx:id="labelCodigoEquipo" layoutX="112.0" layoutY="239.0" text="Ingrese el código equipo:" />
+                <Button fx:id="buttonBuscarCedula" layoutX="584.0" layoutY="185.0" mnemonicParsing="false" onAction="#buscarCliente" text="Buscar" />
+            <TextField fx:id="textfieldCodigoEquipo" layoutX="362.0" layoutY="234.0" prefHeight="41.0" prefWidth="206.0" />
+            <Label fx:id="labelFechaCita" layoutX="715.0" layoutY="189.0" text="Ingrese la fecha de la cita:" />
+            <TextField fx:id="textfieldFechaCita" layoutX="966.0" layoutY="185.0" prefHeight="41.0" prefWidth="206.0" />
+            <Button fx:id="buttonBuscarFecha" layoutX="1196.0" layoutY="184.0" mnemonicParsing="false" onAction="#buscarCliente" text="Buscar" />
+            <Label fx:id="labelTecnicoCargo" layoutX="713.0" layoutY="238.0" text="Ingrese el tecnico a cargo:" />
+            <TextField fx:id="textfieldTecnicoCargo" layoutX="964.0" layoutY="232.0" prefHeight="41.0" prefWidth="206.0" />
+            <Button fx:id="buttonBuscarTecnico" layoutX="1195.0" layoutY="233.0" mnemonicParsing="false" onAction="#buscarCliente" text="Buscar" />
+            </children>
+        </Pane>
+        <Button fx:id="buttonRegresar" layoutX="120.0" layoutY="691.0" mnemonicParsing="false" onAction="#regresarModuloCliente" text="Regresar" />
+        <Button fx:id="buttonVerDetalle" layoutX="1348.0" layoutY="688.0" mnemonicParsing="false" onAction="#verDetalleCliente" text="Ver detalles" />
+      <Button fx:id="buttonModificarCita" layoutX="685.0" layoutY="696.0" mnemonicParsing="false" onAction="#modificarCita" text="Modificar Cita Técnica" />
+    </children>
+</AnchorPane>
