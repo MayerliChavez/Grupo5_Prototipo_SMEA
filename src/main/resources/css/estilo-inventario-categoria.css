@@ -1,0 +1,140 @@
+
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+========================================================= */
+
+.root {
+    -fx-font-family: "Segoe UI Semibold", "Segoe UI";
+    -fx-font-size: 13px;
+    -fx-text-fill: #FFFFFF;
+}
+
+/* =========================================================
+   FONDO GENERAL
+========================================================= */
+
+#paneFondo {
+    -fx-background-image: url("../Imagenes/imagenFondoProveedor.png");
+    -fx-background-size: cover;
+}
+
+/* Contenedor principal translúcido */
+#paneContenedor {
+    -fx-background-color: rgba(255, 255, 255, 0.30);
+    -fx-background-radius: 10px;
+    -fx-border-color: #CCCCCC;
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+}
+
+/* =========================================================
+   TÍTULO
+========================================================= */
+
+#labelBienvenida {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 55px;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+
+    /* Sombra más clara para mejor lectura */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.9), 12, 0.4, 0, 3);
+}
+
+/* =========================================================
+   BOTONES DE MÓDULO
+========================================================= */
+
+.button {
+    -fx-background-color: linear-gradient(to right, #1E3C72, #2A5298);
+    -fx-text-fill: #FFFFFF;
+
+    -fx-font-size: 12.5px;
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 22;
+    -fx-border-radius: 22;
+
+    -fx-padding: 10 16 10 16;
+    -fx-cursor: hand;
+
+    -fx-alignment: CENTER;
+
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 5, 0.3, 0, 2);
+}
+
+.btn-buscarCodigo {
+    -fx-background-image: url("/Imagenes/iconoBuscarCodigo.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center 10;
+    -fx-background-size: 26px 26px;
+
+    -fx-padding: 16 10 16 10;
+}
+
+.btn-buscarCategoria {
+    -fx-background-image: url("/Imagenes/iconoBuscarCategoria.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center 10;
+    -fx-background-size: 26px 26px;
+
+    -fx-padding: 16 10 16 10;
+}
+
+
+/* Hover elegante */
+.button:hover {
+    -fx-background-color: linear-gradient(to right, #2A5298, #1E3C72);
+    -fx-border-color: #90CAF9;
+    -fx-border-width: 1.2;
+}
+
+/* Click */
+.button:pressed {
+    -fx-scale-x: 0.97;
+    -fx-scale-y: 0.97;
+}
+
+/* =========================================================
+   BOTONES DESHABILITADOS
+========================================================= */
+
+.button:disabled {
+    -fx-background-color: rgba(255,255,255,0.25);
+    -fx-text-fill: rgba(255,255,255,0.6);
+    -fx-border-color: rgba(255,255,255,0.4);
+    -fx-opacity: 0.75;
+}
+
+/* =========================================================
+   BOTÓN REGRESAR
+========================================================= */
+
+#buttonRegresar {
+    -fx-background-color: rgba(255,255,255,0.15);
+    -fx-text-fill: #E3F2FD;
+
+    -fx-font-size: 12.5px;
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 24;
+    -fx-border-radius: 24;
+    -fx-border-color: rgba(255,255,255,0.6);
+}
+
+/* Hover regresar */
+#buttonRegresar:hover {
+    -fx-background-color: linear-gradient(to right, #1E3C72, #2A5298);
+}
+
+/* =========================================================
+   TOOLTIP
+========================================================= */
+
+.tooltip {
+    -fx-background-color: #263238;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 12px;
+    -fx-background-radius: 8;
+    -fx-padding: 6 10 6 10;
+}

@@ -16,7 +16,7 @@
             <TextField fx:id="labelNombre" layoutX="584.0" layoutY="247.0" prefHeight="44.0" prefWidth="402.0" />
             <Label fx:id="textSeleccion" layoutX="12.0" layoutY="137.0" />
             <Button fx:id="buttonModuloClientes" layoutX="724.0" layoutY="354.0" mnemonicParsing="false" onAction="#clickModuloClientes" prefHeight="149.0" prefWidth="229.0" styleClass="btn-cliente" text="Módulo de Clientes" />
-            <Button fx:id="buttonActualizarDatos" layoutX="423.0" layoutY="354.0" mnemonicParsing="false" onAction="#clickActualizarDatos" prefHeight="149.0" prefWidth="229.0" styleClass="btn-informacionPersonal" text="Actualizar Datos Personal" />
+            <Button fx:id="buttonActualizarDatos" layoutX="423.0" layoutY="354.0" mnemonicParsing="false" onAction="#clickActualizarDatos" prefHeight="149.0" prefWidth="229.0" styleClass="btn-informacionPersonal" text="Actualizar Datos Personales" />
             <Button fx:id="buttonActualizarCredenciales" layoutX="1023.0" layoutY="353.0" mnemonicParsing="false" onAction="#clickActualizarCredenciales" prefHeight="149.0" prefWidth="229.0" styleClass="btn-actualizarCredenciales" text="Actualizar Credenciales" />
             <Button fx:id="buttonModuloMantenimiento" layoutX="119.0" layoutY="354.0" mnemonicParsing="false" onAction="#clickModuloMantenimiento" prefHeight="149.0" prefWidth="229.0" styleClass="btn-mantenimiento" text="Módulo de Mantenimiento" />
          </children>

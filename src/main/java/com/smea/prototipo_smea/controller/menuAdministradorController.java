@@ -3,13 +3,13 @@ package com.smea.prototipo_smea.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ContentDisplay;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import javax.swing.*;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class menuAdministradorController implements Initializable, ControladorInyectable {
@@ -182,6 +182,53 @@ public class menuAdministradorController implements Initializable, ControladorIn
 
     @FXML
     private void clcikActualizarCredenciales(ActionEvent event) {
-        mainController.saver("actualizarCredenciales.fxml");
+
+  /*      String contraseniaActual = mainController.getPasswordUsuario();
+
+        Dialog<String> dialog = new Dialog<>();
+        dialog.setTitle("Verificación de seguridad");
+        dialog.setHeaderText("Ingrese su contraseña actual");
+
+        ButtonType confirmarButton = new ButtonType("Confirmar", ButtonBar.ButtonData.OK_DONE);
+        dialog.getDialogPane().getButtonTypes().addAll(confirmarButton, ButtonType.CANCEL);
+
+        PasswordField passwordField = new PasswordField();
+        passwordField.setPromptText("Contraseña");
+
+        dialog.getDialogPane().setContent(passwordField);
+
+        dialog.setResultConverter(dialogButton -> {
+            if (dialogButton == confirmarButton) {
+                return passwordField.getText();
+            }
+            return null;
+        });
+
+        contraseniaActual = "12345678";
+
+        String finalContraseniaActual = contraseniaActual;
+        dialog.showAndWait().ifPresent(ingreso -> {
+
+            if (ingreso.equals(finalContraseniaActual)) {
+                mainController.saver("actualizarCredenciales.fxml");
+            } else {
+                mostrarAlerta(
+                        "Contraseña incorrecta",
+                        "La contraseña ingresada no es válida",
+                        Alert.AlertType.ERROR
+                );
+            }
+        });*/
     }
+
+    private void mostrarAlerta(String titulo, String mensaje, Alert.AlertType tipo) {
+        Alert alert = new Alert(tipo);
+        alert.setTitle(titulo);
+        alert.setHeaderText(null);
+        alert.setContentText(mensaje);
+        alert.showAndWait();
+    }
+
+
+
 }

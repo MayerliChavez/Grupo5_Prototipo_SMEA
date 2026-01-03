@@ -2,25 +2,85 @@ package com.smea.prototipo_smea.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class menuBodegueroCController implements ControladorInyectable {
+public class menuBodegueroCController
+        implements ControladorInyectable, Initializable {
 
     // ====== CONTROLADOR CENTRAL ======
     private MainController mainController;
 
     // ====== COMPONENTES FXML ======
-    @FXML
-    private TextField labelNombre;
+    @FXML private TextField labelNombre;
+    @FXML private Button buttonModuloInventario;
+    @FXML private Button buttonActualizarDatos;
+    @FXML private Button buttonActualizarCredenciales;
+    @FXML private Button buttonRegresarMenuPrincipal;
 
     // ====== INYECCIÓN DEL CONTROLADOR CENTRAL ======
     @Override
     public void setMainController(MainController mainController) {
         this.mainController = mainController;
-        initialize(null, null);
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        labelNombre.setText("Bodeguero Coordinador");
+        labelNombre.setEditable(false);
+        cargarIconos();
+    }
+
+    private void cargarIconos() {
+
+        // ICONO DEL BOTÓN INFORMACIÓN PERSONAL
+        Image imageInformacionPersonal = new Image(
+                getClass().getResourceAsStream("/Imagenes/iconoInformacionPersonal.png")
+        );
+
+        ImageView imageViewInformacionPersonal = new ImageView(imageInformacionPersonal);
+        imageViewInformacionPersonal.setFitWidth(95);
+        imageViewInformacionPersonal.setFitHeight(95);
+        imageViewInformacionPersonal.setPreserveRatio(true);
+
+        buttonActualizarDatos.setGraphic(imageViewInformacionPersonal);
+        buttonActualizarDatos.setContentDisplay(ContentDisplay.TOP);
+        buttonActualizarDatos.setGraphicTextGap(15);
+
+        // ICONO DEL BOTÓN ACTUALIZAR CREDENCIALES
+        Image imageActualizarCredenciales = new Image(
+                getClass().getResourceAsStream("/Imagenes/iconoActualizarCredenciales.png")
+        );
+
+        ImageView imageViewActualizarCredenciales = new ImageView(imageActualizarCredenciales);
+        imageViewActualizarCredenciales.setFitWidth(95);
+        imageViewActualizarCredenciales.setFitHeight(95);
+        imageViewActualizarCredenciales.setPreserveRatio(true);
+
+        buttonActualizarCredenciales.setGraphic(imageViewActualizarCredenciales);
+        buttonActualizarCredenciales.setContentDisplay(ContentDisplay.TOP);
+        buttonActualizarCredenciales.setGraphicTextGap(15);
+
+        // ICONO DEL BOTÓN MÓDULO INVENTARIO
+        Image imageModuloMInventario = new Image(
+                getClass().getResourceAsStream("/Imagenes/iconoInventario.png")
+        );
+
+        ImageView imageViewModuloInventario = new ImageView(imageModuloMInventario);
+        imageViewModuloInventario.setFitWidth(95);
+        imageViewModuloInventario.setFitHeight(95);
+        imageViewModuloInventario.setPreserveRatio(true);
+
+        buttonModuloInventario.setGraphic(imageViewModuloInventario);
+        buttonModuloInventario.setContentDisplay(ContentDisplay.TOP);
+        buttonModuloInventario.setGraphicTextGap(15);
     }
 
     // ====== EVENTOS DE BOTONES ======
@@ -49,8 +109,4 @@ public class menuBodegueroCController implements ControladorInyectable {
         mainController.saver("menuSMEA.fxml");
     }
 
-    public void initialize(URL url, ResourceBundle rb) {
-        labelNombre.setText("Gerente General");
-        labelNombre.setEditable(false);
-    }
 }

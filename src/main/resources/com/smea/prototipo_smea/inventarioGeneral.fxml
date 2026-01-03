@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneFondo" stylesheets="@../../../css/estilo-inventario-categoria.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.inventarioGeneralController">
+    <children>
+        <Pane fx:id="paneContenedor" layoutX="23.0" layoutY="22.0" prefHeight="600.0" prefWidth="1250.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0">
+            <children>
+                <Label fx:id="labelBienvenida" contentDisplay="CENTER" layoutX="86.0" layoutY="129.0" text="BIENVENIDO AL SUBMÓDULO INVENTARIO" textOverrun="CENTER_WORD_ELLIPSIS">
+                    <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                    </font>
+                </Label>
+                <TilePane alignment="CENTER" hgap="15" layoutX="359.0" layoutY="222.0" prefColumns="5" prefHeight="265.0" prefWidth="547.0" vgap="15">
+
+                    <children>
+                        <Button fx:id="buttonBuscarCodigo" alignment="CENTER" onAction="#clickBuscarCodigo" prefHeight="219.0" prefWidth="237.0" styleClass="btn-buscarCodigo" text="Buscar elemento por Código" textAlignment="CENTER" wrapText="true" />
+                        <Button fx:id="buttonBuscarCategoria" alignment="CENTER" onAction="#clickBuscarCategoria" prefHeight="219.0" prefWidth="237.0" styleClass="btn-buscarCategoria" text="Buscar elemento por categoría" textAlignment="CENTER" wrapText="true" />
+
+                    </children>
+                </TilePane>
+                <Button fx:id="buttonRegresar" layoutX="29.0" layoutY="579.0" mnemonicParsing="false" onAction="#clickRegresar" prefHeight="13.0" prefWidth="97.0" text="Regresar" />
+
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

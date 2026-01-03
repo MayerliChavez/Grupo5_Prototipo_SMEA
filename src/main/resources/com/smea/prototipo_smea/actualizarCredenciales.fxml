@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="panelFondo" stylesheets="@../../../css/estilo-detalle-orden-pago.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.actualizarCredencialesController">
+    <children>
+        <Pane fx:id="panelContenedor" layoutX="110.0" layoutY="63.0" prefHeight="600.0" prefWidth="1250.0" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="63.0">
+            <children>
+                <Label fx:id="labelBienvenida" layoutX="358.0" layoutY="81.0" text="Actualizar Credenciales">
+                    <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                    </font>
+                </Label>
+                <Line endX="592.5794677734375" layoutX="433.0" layoutY="171.0" startX="-114.0477294921875" stroke="WHITE" strokeWidth="5.0" />
+                <Label fx:id="labeCambios" layoutX="256.0" layoutY="195.0" text="Indique los elementos que requiere actualizar:" />
+                <ChoiceBox fx:id="chiceBoxCambios" layoutX="693.0" layoutY="189.0" prefHeight="43.0" prefWidth="279.0" />
+                <Label fx:id="labelContrasena" layoutX="85.0" layoutY="405.0" text="Ingrese la nueva contraseña:" />
+                <Label fx:id="labelUsuario" layoutX="94.0" layoutY="303.0" text="Ingrese el nuevo usuario:" />
+                <TextField fx:id="textFieldUsuario" layoutX="337.0" layoutY="298.0" prefHeight="41.0" prefWidth="286.0" />
+            <Label fx:id="labelConfirmarUsuario" layoutX="703.0" layoutY="304.0" text="Confirma el usuario:" />
+            <TextField fx:id="textFieldConfirmarUsuario" layoutX="903.0" layoutY="298.0" prefHeight="41.0" prefWidth="286.0" />
+            <Label fx:id="labelConfirmarContrasena" layoutX="714.0" layoutY="401.0" text="Confirma la contraseña:" />
+            <PasswordField fx:id="passwordFieldContrasena" layoutX="367.0" layoutY="402.0" prefHeight="35.0" prefWidth="243.0" />
+            <PasswordField fx:id="passwordFieldConfirmarContrasena" layoutX="948.0" layoutY="398.0" prefHeight="35.0" prefWidth="251.0" />
+            </children>
+        </Pane>
+        <Button fx:id="buttonRegresar" layoutX="120.0" layoutY="691.0" mnemonicParsing="false" onAction="#regresarMenuVarias" text="Regresar" />
+        <Button fx:id="buttonGuardarCambios" layoutX="1278.0" layoutY="686.0" mnemonicParsing="false" onAction="#guardarCambios" text="Guardar Cambios" />
+    </children>
+</AnchorPane>

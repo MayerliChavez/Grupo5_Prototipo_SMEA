@@ -11,7 +11,7 @@
    <children>
       <Pane fx:id="paneContenedor" layoutX="23.0" layoutY="22.0" prefHeight="600.0" prefWidth="1250.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0">
          <children>
-            <Label fx:id="labelBienvenida" contentDisplay="CENTER" layoutX="112.0" layoutY="83.0" text="BIENVENIDO AL MÓDULO DEL PROVEEDOR" textOverrun="CENTER_WORD_ELLIPSIS">
+            <Label fx:id="labelBienvenida" contentDisplay="CENTER" layoutX="136.0" layoutY="81.0" text="BIENVENIDO AL MÓDULO DE PROVEEDOR" textOverrun="CENTER_WORD_ELLIPSIS">
                <font>
                   <Font name="System Bold Italic" size="20.0" />
                </font>

@@ -10,6 +10,7 @@ public class MainController {
 
     private StackPane root;
     private String rolUsuario;
+    private String PasswordUsuario;
 
     public MainController(StackPane root) {
         this.root = root;
@@ -30,6 +31,13 @@ public class MainController {
 
     public Object getDatoTemporal() {
         return datoTemporal;
+    }
+
+    public String getPasswordUsuario() {
+        return PasswordUsuario;
+    }
+    public void setPasswordUsuario(String PasswordUsuario) {
+        this.PasswordUsuario = PasswordUsuario;
     }
 
     public void saver(String fxml) {

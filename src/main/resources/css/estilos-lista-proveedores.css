@@ -80,6 +80,24 @@
     -fx-border-color: #1E88E5;
 }
 
+.text-field:focused,
+.text-area:focused,
+.choice-box:focused {
+    -fx-border-color: #1E88E5;
+    -fx-border-width: 2;
+}
+
+.choice-box {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #B0BEC5;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.choice-box .label {
+    -fx-text-fill: #263238;
+}
+
 /* ===============================
    TABLA
 ================================ */
