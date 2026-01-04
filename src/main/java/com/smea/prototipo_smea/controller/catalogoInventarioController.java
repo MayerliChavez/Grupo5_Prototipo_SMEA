@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
@@ -24,6 +25,7 @@ public class catalogoInventarioController
     @FXML private Button buttonAsignarCategoria;
     @FXML private Button buttonConsultarCatalogo;
     @FXML private Button buttonRegresar;
+
 
     // ================== INYECCIÓN ==================
     @Override

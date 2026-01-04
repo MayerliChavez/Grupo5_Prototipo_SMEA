@@ -7,6 +7,7 @@ public class ItemInventario {
     private int stock;
     private int cantidad; // usada solo en la orden de salida
 
+
     // =========================
     // CONSTRUCTORES
     // =========================

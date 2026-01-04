@@ -47,6 +47,7 @@ public class registrarEntradaInventarioController implements Initializable, Cont
         chiceBoxTipoItem.setOnAction(e-> chiceBoxMotivo.requestFocus());
         chiceBoxMotivo.setOnAction(e-> datePickerFechaEntrada.requestFocus());
         datePickerFechaEntrada.setOnAction(e-> buttonRegistrarEntrada.requestFocus());
+        configurarTabulacion();
     }
 
     // ================== TABULACIÓN ==================

@@ -1,9 +1,6 @@
 package com.smea.prototipo_smea.clasesNormales;
 
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.*;
 
 public class ElementoCatalogo {
 
@@ -43,6 +40,25 @@ public class ElementoCatalogo {
         this.fechaModificacion = new SimpleStringProperty(fechaModificacion);
         this.categoria = new SimpleStringProperty(categoria);
         this.estado = new SimpleStringProperty(estado);
+    }
+
+    private final BooleanProperty seleccionado =
+            new SimpleBooleanProperty(false);
+
+    public Boolean getSeleccionado() {
+        return seleccionado.get();
+    }
+
+    public void setSeleccionado(Boolean seleccionado) {
+        this.seleccionado.set(seleccionado);
+    }
+
+    public BooleanProperty seleccionadoProperty() {
+        return seleccionado;
+    }
+
+    public boolean isSeleccionado() {
+        return seleccionado.get();
     }
 
     public String getCodigo() {
@@ -140,5 +156,6 @@ public class ElementoCatalogo {
     public void setEstado(String estado) {
         this.estado.set(estado);
     }
+
 
 }

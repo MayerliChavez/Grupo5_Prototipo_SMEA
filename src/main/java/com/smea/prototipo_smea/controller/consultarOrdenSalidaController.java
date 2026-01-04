@@ -269,7 +269,7 @@ public class consultarOrdenSalidaController implements Initializable, Controlado
     @FXML
     private void regresarModuloProveedor(ActionEvent event) {
         System.out.println("Regresar al módulo anterior");
-        mainController.saver("movimientoInventario.fxml");
+        mainController.saver("movimientosInventario.fxml");
     }
 
     // ================== ALERTA ==================
