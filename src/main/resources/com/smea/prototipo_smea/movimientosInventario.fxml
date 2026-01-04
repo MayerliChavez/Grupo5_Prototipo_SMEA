@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneFondo" stylesheets="@../../../css/estilo-catalogo-inventario.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.movimientoInventarioController">
+    <children>
+        <Pane fx:id="paneContenedor" layoutX="23.0" layoutY="22.0" prefHeight="600.0" prefWidth="1250.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0">
+            <children>
+                <Label fx:id="labelBienvenida" contentDisplay="CENTER" layoutX="74.0" layoutY="49.0" text="BIENVENIDO AL SUBMÓDULO MOVIMIENTOS" textOverrun="CENTER_WORD_ELLIPSIS">
+                    <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                    </font>
+                </Label>
+                <TilePane alignment="CENTER" hgap="15" layoutX="116.0" layoutY="154.0" prefColumns="5" prefHeight="265.0" prefWidth="1109.0" vgap="15">
+
+                    <children>
+                        <Button fx:id="buttonDevolucion" alignment="CENTER" onAction="#clickDevolucion" prefHeight="219.0" prefWidth="237.0" styleClass="btn-devolucion" text="Devolución Producto" textAlignment="CENTER" wrapText="true" />
+                        <Button fx:id="buttonRegistrarEntrada" alignment="CENTER" onAction="#clickRegistrarEntrada" prefHeight="219.0" prefWidth="237.0" styleClass="btn-registrarEntrada" text="Registrar Entrada" textAlignment="CENTER" wrapText="true" />
+                        <Button fx:id="buttonRegistrarOrdenSalida" alignment="CENTER" onAction="#clickRegistrarOrdenSalida" prefHeight="219.0" prefWidth="237.0" styleClass="btn-registrarOrdenSalida" text="Registrar Orden de Salida" textAlignment="CENTER" wrapText="true" />
+                        <Button fx:id="buttonHistorialMovimiento" alignment="CENTER" onAction="#clickHistorialMovimientos" prefHeight="219.0" prefWidth="237.0" styleClass="btn-historialMovimiento" text="Historial de Movimientos" textAlignment="CENTER" wrapText="true" />
+                  <Button fx:id="buttonConsultarOrdenSalida" alignment="CENTER" onAction="#clickConsultarOrdenSalida" prefHeight="219.0" prefWidth="237.0" styleClass="btn-consultarOrdenSalida" text="Consultar Ordenes de Salida" textAlignment="CENTER" wrapText="true" />
+
+                    </children>
+                </TilePane>
+                <Button fx:id="buttonRegresar" layoutX="29.0" layoutY="579.0" mnemonicParsing="false" onAction="#clickRegresar" prefHeight="13.0" prefWidth="97.0" text="Regresar" />
+
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

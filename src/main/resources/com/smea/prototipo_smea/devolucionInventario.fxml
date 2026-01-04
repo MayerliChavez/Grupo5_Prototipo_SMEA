@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneFondo" stylesheets="@../../../css/estilos-orden-pago.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.devolucionInventarioController">
+
+    <children>
+
+        <Pane fx:id="paneContenedor" layoutX="80" layoutY="40" prefHeight="650" prefWidth="1250" AnchorPane.bottomAnchor="80" AnchorPane.leftAnchor="80" AnchorPane.rightAnchor="80" AnchorPane.topAnchor="40">
+
+            <children>
+
+                <!-- ================= TÍTULO ================= -->
+                <Label fx:id="textBienvenida" layoutX="456.0" layoutY="89.0" text="Registrar Devolución de Ítem">
+                    <font>
+                        <Font size="20" />
+                    </font>
+                </Label>
+
+                <!-- ============ BÚSQUEDA DE ÍTEM ============ -->
+                <Label fx:id="labelBuscarCodigo" layoutX="458.0" layoutY="189.0" text="Código del ítem:" />
+
+                <TextField fx:id="textFieldCodigoItem" layoutX="608.0" layoutY="184.0" prefWidth="300" />
+
+                <Button fx:id="buttonBuscar" layoutX="928.0" layoutY="184.0" onAction="#buscarItem" text="Buscar" />
+
+                <!-- ============ DATOS DEL ÍTEM ============ -->
+                <Label fx:id="labelDatos" layoutX="178.0" layoutY="235.0" text="Datos del ítem" />
+
+                <Label fx:id="labelNombre" layoutX="331.0" layoutY="276.0" text="Nombre:" />
+                <TextField fx:id="textFieldNombreItem" editable="false" layoutX="427.0" layoutY="270.0" prefHeight="37.0" prefWidth="627.0" />
+
+                <Label fx:id="labelTipo" layoutX="416.0" layoutY="332.0" text="Tipo:" />
+                <TextField fx:id="textFieldTipoItem" editable="false" layoutX="482.0" layoutY="326.0" prefWidth="200" />
+
+                <Label fx:id="labelStockActual" layoutX="724.0" layoutY="331.0" text="Stock actual:" />
+                <TextField fx:id="textFieldStockActual" editable="false" layoutX="854.0" layoutY="325.0" prefWidth="150" />
+
+                <!-- ============ DATOS DE LA DEVOLUCIÓN ============ -->
+                <Label layoutX="170.0" layoutY="376.0" text="Datos de la devolución" />
+
+                <Label layoutX="272.0" layoutY="432.0" text="Tipo de devolución:" />
+                <ChoiceBox fx:id="choiceBoxTipoDevolucion" layoutX="458.0" layoutY="424.0" prefHeight="38.0" prefWidth="252.0" />
+
+                <Label layoutX="767.0" layoutY="430.0" text="Cantidad devuelta:" />
+                <TextField fx:id="textFieldCantidad" layoutX="947.0" layoutY="425.0" prefWidth="150" />
+
+                <Label layoutX="304.0" layoutY="497.0" text="Motivo:" />
+                <TextArea fx:id="textAreaMotivo" layoutX="393.0" layoutY="492.0" prefHeight="80" prefWidth="350" />
+
+                <Label layoutX="804.0" layoutY="497.0" text="Fecha de devolución:" />
+                <DatePicker fx:id="datePickerFecha" layoutX="1006.0" layoutY="490.0" />
+
+            </children>
+        </Pane>
+
+        <!-- ============ BOTONES INFERIORES ============ -->
+        <Button fx:id="buttonRegresar" layoutX="116.0" layoutY="695.0" onAction="#regresar" text="Regresar" />
+
+        <Button fx:id="buttonConfirmar" layoutX="1222.0" layoutY="697.0" onAction="#confirmarDevolucion" text="Confirmar Devolución" />
+
+    </children>
+</AnchorPane>

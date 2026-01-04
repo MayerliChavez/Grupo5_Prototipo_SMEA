@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane fx:id="panelFondo" stylesheets="@../../../css/estilo-detalle-orden-pago.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.registrarEntradaInventarioController">
+    <children>
+        <Pane fx:id="panelContenedor" layoutX="110.0" layoutY="63.0" prefHeight="600.0" prefWidth="1250.0" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="63.0">
+            <children>
+                <Label fx:id="labelBienvenida" layoutX="182.0" layoutY="83.0" text="Registrar la entrada de un producto">
+                </Label>
+                <Label fx:id="labeCodigoItem" layoutX="288.0" layoutY="212.0" text="Ingrese el código del ítem: " />
+                <Label fx:id="labelNombreItem" layoutX="131.0" layoutY="287.0" text="Nombre del ítem:" />
+                <TextField fx:id="textFieldCodigoItem" layoutX="567.0" layoutY="212.0" prefHeight="25.0" prefWidth="330.0" />
+                <Label fx:id="labelTipoItem" layoutX="367.0" layoutY="406.0" text="Tipo de ítem:" />
+                <Label fx:id="labelStockActual" layoutX="854.0" layoutY="288.0" text="Stock actual:" />
+                <TextField fx:id="textFieldNombreItem" layoutX="312.0" layoutY="285.0" prefHeight="35.0" prefWidth="486.0" />
+                <Label fx:id="labelCategoria" layoutX="335.0" layoutY="350.0" text="Categoría:" />
+                <ChoiceBox fx:id="chiceBoxTipoItem" layoutX="516.0" layoutY="401.0" prefHeight="44.0" prefWidth="438.0" />
+                <Line endX="931.1368408203125" layoutX="269.0" layoutY="186.0" startX="-172.90960693359375" startY="-1.52587890625E-5" stroke="WHITE" strokeWidth="5.0" />
+            <Button fx:id="buttonBuscar" layoutX="926.0" layoutY="208.0" mnemonicParsing="false" onAction="#buscarItem" text="Buscar" />
+            <TextField fx:id="textFieldStockActual" layoutX="989.0" layoutY="285.0" prefHeight="35.0" prefWidth="139.0" />
+            <TextField fx:id="textFieldCategoria" layoutX="443.0" layoutY="346.0" prefHeight="35.0" prefWidth="329.0" />
+            <Label fx:id="labelCantidad" layoutX="822.0" layoutY="347.0" text="Cantidad:" />
+            <TextField fx:id="textFieldCantidadActual" layoutX="926.0" layoutY="346.0" prefHeight="35.0" prefWidth="139.0" />
+            <Label fx:id="labelMotivo" layoutX="414.0" layoutY="472.0" text="Motivo:" />
+            <ChoiceBox fx:id="chiceBoxMotivo" layoutX="509.0" layoutY="465.0" prefHeight="43.0" prefWidth="446.0" />
+            <Label fx:id="labelFechaEntrada" layoutX="436.0" layoutY="539.0" text="Fecha de entrada:" />
+            <DatePicker fx:id="datePickerFechaEntrada" layoutX="631.0" layoutY="530.0" />
+            </children>
+        </Pane>
+        <Button fx:id="buttonRegresar" layoutX="138.0" layoutY="678.0" mnemonicParsing="false" onAction="#regresarModuloProveedor" text="Regresar" />
+        <Button fx:id="buttonRegistrarEntrada" layoutX="1290.0" layoutY="678.0" mnemonicParsing="false" onAction="#registrarEntrada" text="Registrar Entrada" />
+    </children>
+</AnchorPane>
