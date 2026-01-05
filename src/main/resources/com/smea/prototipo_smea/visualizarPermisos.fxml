@@ -1,0 +1,67 @@
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Button?>
+<AnchorPane xmlns="http://javafx.com/javafx/25"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.smea.prototipo_smea.controller.seguridadRolesController">
+
+    <children>
+
+        <Label text="GESTIÓN DE ROLES"
+               layoutX="450" layoutY="20"
+               styleClass="titulo-modulo"/>
+
+        <!-- TABLA ROLES -->
+        <TableView fx:id="tablaRoles"
+                   layoutX="80" layoutY="80"
+                   prefWidth="450" prefHeight="420">
+
+            <columns>
+                <TableColumn fx:id="colNombre" text="Rol" prefWidth="200"/>
+                <TableColumn fx:id="colEstado" text="Estado" prefWidth="120"/>
+                <TableColumn fx:id="colDescripcion" text="Descripción" prefWidth="220"/>
+            </columns>
+        </TableView>
+
+        <!-- PANEL VERIFICACIÓN -->
+        <Pane layoutX="560" layoutY="80"
+              prefWidth="620" prefHeight="200"
+              styleClass="panel-secundario">
+
+            <Label text="Verificar Rol"
+                   layoutX="20" layoutY="10"/>
+
+            <Label text="Usuario:" layoutX="20" layoutY="50"/>
+            <TextField fx:id="txtUsuario"
+                       layoutX="100" layoutY="45"/>
+
+            <Label text="Módulo:" layoutX="20" layoutY="90"/>
+            <ChoiceBox fx:id="choiceModulo"
+                       layoutX="100" layoutY="85"/>
+
+            <Button text="Verificar"
+                    layoutX="100" layoutY="130"
+                    onAction="#verificarRol"/>
+
+        </Pane>
+
+        <!-- BOTONES -->
+        <Button text="Ver Permisos"
+                layoutX="560" layoutY="310"
+                onAction="#verPermisos"/>
+
+        <Button text="Activar / Desactivar"
+                layoutX="700" layoutY="310"
+                onAction="#cambiarEstado"/>
+
+        <Button text="Regresar"
+                layoutX="80" layoutY="530"
+                onAction="#regresar"/>
+
+    </children>
+</AnchorPane>

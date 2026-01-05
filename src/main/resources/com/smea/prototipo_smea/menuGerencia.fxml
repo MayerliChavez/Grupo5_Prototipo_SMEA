@@ -20,11 +20,11 @@
             <TextField fx:id="labelNombre" layoutX="676.0" layoutY="211.0" prefHeight="44.0" prefWidth="461.0" />
             <Button fx:id="buttonmoduloreporte" alignment="CENTER" layoutX="185.0" layoutY="281.0" onAction="#clickIngresarModuloReportes" prefHeight="125.0" prefWidth="220.0" styleClass="btn-reportes" text="Módulo de Reportes" textAlignment="CENTER" wrapText="true" />
             <Button fx:id="buttonModuloAdministracionSistema" contentDisplay="TOP" layoutX="317.0" layoutY="514.0" onAction="#clickIngresarModuloAdministracionSistema" prefHeight="146.0" prefWidth="220.0" text="Módulo de Administración del Sistema" textAlignment="CENTER" wrapText="true" />
-            <Button fx:id="buttonMantenimiento" layoutX="648.0" layoutY="509.0" mnemonicParsing="false" onAction="#clcikActualizarCredenciales" prefHeight="125.0" prefWidth="220.0" styleClass="btn-moduloMantenimiento" text="Módulo Mantenimiento" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="buttonMantenimiento" layoutX="648.0" layoutY="509.0" mnemonicParsing="false" onAction="#clcikModuloMantenimiento" prefHeight="125.0" prefWidth="220.0" styleClass="btn-moduloMantenimiento" text="Módulo Mantenimiento" textAlignment="CENTER" wrapText="true" />
             <Button fx:id="buttonModuloProveedor" layoutX="1083.0" layoutY="284.0" mnemonicParsing="false" onAction="#clickIngresarModuloProveedores" prefHeight="125.0" prefWidth="220.0" styleClass="btn-proveedor" text="Módulo de Proveedores" textAlignment="CENTER" wrapText="true" />
             <Button fx:id="buttonModuloInventario" layoutX="474.0" layoutY="285.0" mnemonicParsing="false" onAction="#clickIngresarModuloInventario" prefHeight="125.0" prefWidth="220.0" styleClass="btn-inventario" text="Módulo de inventario " textAlignment="CENTER" wrapText="true" />
             <Button fx:id="buttonModuloCliente" layoutX="787.0" layoutY="283.0" mnemonicParsing="false" onAction="#clickIngresarModuloClientes" prefHeight="125.0" prefWidth="220.0" styleClass="btn-cliente" text="Módulo de Clientes" textAlignment="CENTER" wrapText="true" />
-            <Button fx:id="buttonModuloAuditoria" layoutX="963.0" layoutY="512.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="220.0" styleClass="btn-auditoria" text="Módulo de Auditoría " />
+            <Button fx:id="buttonModuloAuditoria" layoutX="963.0" layoutY="512.0" mnemonicParsing="false" onAction="#clickIngresarModuloAuditoria" prefHeight="125.0" prefWidth="220.0" styleClass="btn-auditoria" text="Módulo de Auditoría " />
          </children>
       </Pane>
       <Button fx:id="buttonRegresarMenuPrincipal" layoutX="75.0" layoutY="729.0" mnemonicParsing="false" onAction="#clikcRegresarMenuPrincipal" text="Regresar al Menú Principal" />

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="paneFondo" stylesheets="@../../../css/estilo-consultar-proveedor.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.movimientoMantenimientoController">
+
+    <children>
+        <Pane fx:id="paneContenedor" layoutX="110" layoutY="63" prefHeight="600" prefWidth="1250" AnchorPane.bottomAnchor="97" AnchorPane.leftAnchor="110" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="63">
+
+            <children>
+
+                <Label fx:id="labelBienvenida" layoutX="252.0" layoutY="17.0" styleClass="titulo-modulo" text="MOVIMIENTOS DE MANTENIMIENTO" />
+
+                <!-- FILTROS -->
+                <Label layoutX="326.0" layoutY="130.0" text="Equipo:" />
+                <TextField fx:id="txtEquipo" layoutX="406.0" layoutY="125.0" prefWidth="260" />
+
+                <Label layoutX="706.0" layoutY="130.0" text="Tipo:" />
+                <ChoiceBox fx:id="choiceTipo" layoutX="774.0" layoutY="125.0" prefHeight="44.0" prefWidth="275.0" />
+
+                <Label layoutX="319.0" layoutY="194.0" text="Usuario:" />
+                <TextField fx:id="txtUsuario" layoutX="407.0" layoutY="188.0" prefHeight="41.0" prefWidth="260.0" />
+
+                <Label layoutX="722.0" layoutY="193.0" text="Fecha:" />
+                <DatePicker fx:id="dateFecha" layoutX="818.0" layoutY="189.0" />
+
+                <Button layoutX="1139.0" layoutY="124.0" onAction="#buscarMovimientos" text="Buscar" />
+
+                <Button layoutX="1139.0" layoutY="187.0" onAction="#limpiarFiltros" text="Limpiar" />
+
+                <!-- TABLA -->
+                <TableView fx:id="tablaMovimientos" layoutX="139.0" layoutY="263.0" prefHeight="340" prefWidth="1130">
+
+                    <columns>
+                        <TableColumn fx:id="colUsuario" prefWidth="120" text="Usuario" />
+                        <TableColumn fx:id="colRol" prefWidth="120" text="Rol" />
+                        <TableColumn fx:id="colEquipo" prefWidth="220" text="Equipo" />
+                        <TableColumn fx:id="colTipo" prefWidth="120" text="Tipo" />
+                        <TableColumn fx:id="colAccion" prefWidth="150" text="Acción" />
+                        <TableColumn fx:id="colEstado" prefWidth="210.74127197265625" text="Estado" />
+                        <TableColumn fx:id="colFecha" prefWidth="200.458740234375" text="Fecha" />
+                        <TableColumn fx:id="colObservacion" prefWidth="139.6585693359375" text="Observación" />
+                    </columns>
+
+                </TableView>
+
+            </children>
+        </Pane>
+
+        <Button layoutX="760" layoutY="690" onAction="#exportar" text="Exportar" />
+
+        <Button fx:id="buttonRegresar" layoutX="140" layoutY="690" onAction="#regresar" text="Regresar" />
+    </children>
+</AnchorPane>

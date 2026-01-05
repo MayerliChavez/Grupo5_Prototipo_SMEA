@@ -113,7 +113,7 @@ public class menuGerenciaController implements Initializable, ControladorInyecta
     }
 
     @FXML
-    private void clcikActualizarCredenciales(ActionEvent event) {
+    private void clcikModuloMantenimiento(ActionEvent event) {
         mainController.saver("moduloMantenimiento.fxml");
     }
 
@@ -131,6 +131,12 @@ public class menuGerenciaController implements Initializable, ControladorInyecta
     private void clickIngresarModuloClientes(ActionEvent event) {
         mainController.saver("moduloCliente.fxml");
     }
+
+    @FXML
+    private void clickIngresarModuloAuditoria(ActionEvent event) {
+        mainController.saver("moduloAuditoria.fxml");
+    }
+
 
     @FXML
     private void clikcRegresarMenuPrincipal(ActionEvent event) {

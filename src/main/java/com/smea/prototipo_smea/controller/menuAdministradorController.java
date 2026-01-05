@@ -175,52 +175,6 @@ public class menuAdministradorController implements Initializable, ControladorIn
         mainController.saver("moduloAdministracionSistema.fxml");
     }
 
-    @FXML
-    private void clickActualizarInformacionPersonal(ActionEvent event) {
-        mainController.saver("actualizarInformacion.fxml");
-    }
-
-    @FXML
-    private void clcikActualizarCredenciales(ActionEvent event) {
-
-  /*      String contraseniaActual = mainController.getPasswordUsuario();
-
-        Dialog<String> dialog = new Dialog<>();
-        dialog.setTitle("Verificación de seguridad");
-        dialog.setHeaderText("Ingrese su contraseña actual");
-
-        ButtonType confirmarButton = new ButtonType("Confirmar", ButtonBar.ButtonData.OK_DONE);
-        dialog.getDialogPane().getButtonTypes().addAll(confirmarButton, ButtonType.CANCEL);
-
-        PasswordField passwordField = new PasswordField();
-        passwordField.setPromptText("Contraseña");
-
-        dialog.getDialogPane().setContent(passwordField);
-
-        dialog.setResultConverter(dialogButton -> {
-            if (dialogButton == confirmarButton) {
-                return passwordField.getText();
-            }
-            return null;
-        });
-
-        contraseniaActual = "12345678";
-
-        String finalContraseniaActual = contraseniaActual;
-        dialog.showAndWait().ifPresent(ingreso -> {
-
-            if (ingreso.equals(finalContraseniaActual)) {
-                mainController.saver("actualizarCredenciales.fxml");
-            } else {
-                mostrarAlerta(
-                        "Contraseña incorrecta",
-                        "La contraseña ingresada no es válida",
-                        Alert.AlertType.ERROR
-                );
-            }
-        });*/
-    }
-
     private void mostrarAlerta(String titulo, String mensaje, Alert.AlertType tipo) {
         Alert alert = new Alert(tipo);
         alert.setTitle(titulo);

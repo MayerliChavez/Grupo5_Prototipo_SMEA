@@ -11,4 +11,5 @@ module com.smea.prototipo_smea {
     exports com.smea.prototipo_smea;
     opens com.smea.prototipo_smea.clasesNormales to javafx.fxml;
     exports com.smea.prototipo_smea.clasesNormales;
+    exports com.smea.prototipo_smea.controller;
 }

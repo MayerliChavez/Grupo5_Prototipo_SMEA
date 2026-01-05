@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneFondo" stylesheets="@../../../css/estilo-catalogo-inventario.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.registroAuditoriaController">
+    <children>
+        <Pane fx:id="paneContenedor" layoutX="23.0" layoutY="22.0" prefHeight="600.0" prefWidth="1250.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0">
+            <children>
+                <Label fx:id="labelBienvenida" contentDisplay="CENTER" layoutX="181.0" layoutY="127.0" text="BIENVENIDO AL SUBMÓDULO REGISTRO" textOverrun="CENTER_WORD_ELLIPSIS">
+                </Label>
+                <TilePane alignment="CENTER" hgap="15" layoutX="265.0" layoutY="240.0" prefColumns="5" prefHeight="271.0" prefWidth="775.0" vgap="15">
+
+                    <children>
+                        <Button fx:id="buttonAccionesUsuarios" alignment="CENTER" onAction="#clickAccionesUsuarios" prefHeight="219.0" prefWidth="237.0" styleClass="btn-accionesUsuario" text="Acciones Usuarios" textAlignment="CENTER" wrapText="true" />
+                        <Button fx:id="buttonMovimientoInventario" alignment="CENTER" onAction="#clickMovimientoInventario" prefHeight="219.0" prefWidth="237.0" styleClass="btn-movimientoInventario" text="Movimiento en Inventario" textAlignment="CENTER" wrapText="true" />
+                  <Button fx:id="buttonMovimientoMantenimiento" alignment="CENTER" onAction="#clickMovimientoMantenimiento" prefHeight="219.0" prefWidth="237.0" styleClass="btn-movimientoMantenimiento" text="Movimientos de Mantenimiento" textAlignment="CENTER" wrapText="true" />
+
+                    </children>
+                </TilePane>
+                <Button fx:id="buttonRegresar" layoutX="29.0" layoutY="579.0" mnemonicParsing="false" onAction="#clickRegresar" prefHeight="13.0" prefWidth="97.0" text="Regresar" />
+
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
