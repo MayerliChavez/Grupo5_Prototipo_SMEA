@@ -14,9 +14,7 @@
              </Label>
             <Label fx:id="textNombre" layoutX="349.0" layoutY="256.0" text="Nombres y Apellidos:" />
             <TextField fx:id="labelNombre" layoutX="576.0" layoutY="249.0" prefHeight="44.0" prefWidth="431.0" />
-            <Button fx:id="buttonModuloInventario" layoutX="195.0" layoutY="349.0" mnemonicParsing="false" onAction="#clickModuloInventario" prefHeight="144.0" prefWidth="230.0" styleClass="btn-inventario" text="Módulo de Inventario" />
-            <Button fx:id="buttonActualizarDatos" layoutX="587.0" layoutY="350.0" mnemonicParsing="false" onAction="#clickActualizarDatos" prefHeight="144.0" prefWidth="230.0" styleClass="btn-informacionPersonal" text="Actualizar Datos Personales" />
-            <Button fx:id="buttonActualizarCredenciales" layoutX="964.0" layoutY="347.0" mnemonicParsing="false" onAction="#clickActualizarCredenciales" prefHeight="144.0" prefWidth="230.0" styleClass="btn-actualizarCredenciales" text="Actualizar Credenciales" />
+            <Button fx:id="buttonModuloInventario" layoutX="611.0" layoutY="355.0" mnemonicParsing="false" onAction="#clickModuloInventario" prefHeight="144.0" prefWidth="230.0" styleClass="btn-inventario" text="Módulo de Inventario" />
          </children>
       </Pane>
       <Button fx:id="buttonRegresarMenuPrincipal" layoutX="143.0" layoutY="676.0" mnemonicParsing="false" onAction="#clikcRegresarMenuPrincipal" text="Regresar al Menú Principal" />

@@ -51,50 +51,12 @@ public class menuRepresentanteCController
         buttonModuloProveedor.setGraphic(imageViewProveedor);
         buttonModuloProveedor.setContentDisplay(ContentDisplay.TOP);
         buttonModuloProveedor.setGraphicTextGap(15);
-
-        // ICONO DEL BOTÓN INFORMACIÓN PERSONAL
-        Image imageInformacionPersonal = new Image(
-                getClass().getResourceAsStream("/Imagenes/iconoInformacionPersonal.png")
-        );
-
-        ImageView imageViewInformacionPersonal = new ImageView(imageInformacionPersonal);
-        imageViewInformacionPersonal.setFitWidth(64);
-        imageViewInformacionPersonal.setFitHeight(64);
-        imageViewInformacionPersonal.setPreserveRatio(true);
-
-        buttonActualizarDatos.setGraphic(imageViewInformacionPersonal);
-        buttonActualizarDatos.setContentDisplay(ContentDisplay.TOP);
-        buttonActualizarDatos.setGraphicTextGap(12);
-
-        // ICONO DEL BOTÓN ACTUALIZAR CREDENCIALES
-        Image imageActualizarCredenciales = new Image(
-                getClass().getResourceAsStream("/Imagenes/iconoActualizarCredenciales.png")
-        );
-
-        ImageView imageViewActualizarCredenciales = new ImageView(imageActualizarCredenciales);
-        imageViewActualizarCredenciales.setFitWidth(50);
-        imageViewActualizarCredenciales.setFitHeight(50);
-        imageViewActualizarCredenciales.setPreserveRatio(true);
-
-        buttonActubuttonActualizarDatosalizarCredenciales.setGraphic(imageViewActualizarCredenciales);
-        buttonActubuttonActualizarDatosalizarCredenciales.setContentDisplay(ContentDisplay.TOP);
-        buttonActubuttonActualizarDatosalizarCredenciales.setGraphicTextGap(12);
     }
 
     // ===== EVENTOS =====
     @FXML
     private void clickModuloProveedores(ActionEvent event) {
         mainController.saver("moduloProveedor.fxml");
-    }
-
-    @FXML
-    private void clickActualizarDatos(ActionEvent event) {
-        mainController.saver("actualizarInformacion.fxml");
-    }
-
-    @FXML
-    private void clickActualizarCredenciales(ActionEvent event) {
-        mainController.saver("actualizarCredenciales.fxml");
     }
 
     @FXML

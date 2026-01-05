@@ -3,26 +3,24 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="paneFondo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../css/menusPerfilesCSS.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.menuRepresentanteTController">
+<AnchorPane fx:id="paneFondo" stylesheets="@../../../css/meduRepresentanteTCSS.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.menuRepresentanteTController">
    <children>
-      <Pane fx:id="labelContenedor" layoutX="25.0" layoutY="22.0" prefHeight="356.0" prefWidth="550.0">
+      <Pane fx:id="labelContenedor" layoutX="110.0" layoutY="63.0" prefHeight="600.0" prefWidth="1250.0" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="63.0">
          <children>
-            <Label fx:id="textBienvenida" layoutX="35.0" layoutY="14.0" text="BIENVENIDO AL MENÚ DEL&#10;REPRESENTANTE DE TESORERÍA" textAlignment="CENTER" wrapText="true">
+            <Label fx:id="textBienvenida" layoutX="304.0" layoutY="134.0" text="BIENVENIDO AL MENÚ DEL&#10;REPRESENTANTE DE TESORERÍA" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font name="System Bold Italic" size="24.0" />
                </font>
             </Label>
-            <Label fx:id="textNombre" layoutX="40.0" layoutY="129.0" text="Nombres y Apellidos:" />
-            <TextField fx:id="labelNombre" layoutX="219.0" layoutY="124.0" prefHeight="36.0" prefWidth="284.0" />
-            <Label fx:id="textSeleccion" layoutX="38.0" layoutY="164.0" text="Seleccione a que módulo desea ingresar: " />
-            <Button fx:id="buttonModuloReportes" layoutX="180.0" layoutY="201.0" mnemonicParsing="false" text="Ingresar al Módulo de Reportes" />
-            <Button fx:id="buttonRegresarMenuPrincipal" layoutX="22.0" layoutY="309.0" mnemonicParsing="false" onAction="#clikcRegresarMenuPrincipal" text="Regresar al Menú Principal" />
-            <Button fx:id="buttonActualizarDatos" layoutX="167.0" layoutY="249.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="275.0" text="Actualizar Información Personal" />
-            <Button fx:id="buttonActualizarCredenciales" layoutX="321.0" layoutY="309.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="214.0" text="Actualizar Credenciales" />
+            <Label fx:id="textNombre" layoutX="370.0" layoutY="306.0" text="Nombres y Apellidos:" />
+            <TextField fx:id="labelNombre" layoutX="612.0" layoutY="299.0" prefHeight="44.0" prefWidth="397.0" />
+            <Button fx:id="buttonModuloReportes" layoutX="573.0" layoutY="390.0" mnemonicParsing="false" prefHeight="125.0" prefWidth="200.0" text="Módulo de Reportes" styleClass="btn-reportes" />
          </children>
       </Pane>
+      <Button fx:id="buttonRegresarMenuPrincipal" layoutX="143.0" layoutY="670.0" mnemonicParsing="false" onAction="#clikcRegresarMenuPrincipal" text="Regresar al Menú Principal" />
    </children>
-</Pane>
+</AnchorPane>

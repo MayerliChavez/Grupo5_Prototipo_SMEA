@@ -142,6 +142,8 @@ public class moduloInventarioController
                     mainController.saver("menuBodegueroC.fxml");
             case "Bodeguero" ->
                     mainController.saver("menuBodeguero.fxml");
+            case "Gerente General y Técnico" ->
+                    mainController.saver("menuGerencia.fxml");
         }
     }
 }

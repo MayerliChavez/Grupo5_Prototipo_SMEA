@@ -81,6 +81,11 @@ public class moduloAdministracionSistemaController implements Initializable, Con
 
     @FXML
     private void clickRegresar(ActionEvent event) {
-        mainController.saver("menuSMEA.fxml");
+        switch (mainController.getRolUsuario()) {
+            case "Administrador" ->
+                    mainController.saver("menuAdministrador.fxml");
+            case "Gerente General y Técnico" ->
+                    mainController.saver("menuGerencia.fxml");
+        }
     }
 }

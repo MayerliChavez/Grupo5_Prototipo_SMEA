@@ -13,9 +13,7 @@
          <children>
             <Label fx:id="textNombre" layoutX="347.0" layoutY="255.0" text="Nombres y Apellidos:" />
             <TextField fx:id="labelNombre" layoutX="577.0" layoutY="248.0" prefHeight="44.0" prefWidth="439.0" />
-            <Button fx:id="buttonModuloInventario" layoutX="208.0" layoutY="369.0" mnemonicParsing="false" onAction="#clickModuloInventario" prefHeight="144.0" prefWidth="230.0" styleClass="btn-inventario" text="Módulo de Inventario" />
-            <Button fx:id="buttonActualizarDatos" layoutX="561.0" layoutY="366.0" mnemonicParsing="false" onAction="#clickActualizarDatos" prefHeight="144.0" prefWidth="230.0" styleClass="btn-informacionPersonal" text="Actualizar Datos Personales" />
-            <Button fx:id="buttonActualizarCredenciales" layoutX="899.0" layoutY="367.0" mnemonicParsing="false" onAction="#clickActualizarCredenciales" prefHeight="144.0" prefWidth="230.0" styleClass="btn-actualizarCredenciales" text="Actualizar Credenciales" />
+            <Button fx:id="buttonModuloInventario" layoutX="632.0" layoutY="371.0" mnemonicParsing="false" onAction="#clickModuloInventario" prefHeight="144.0" prefWidth="230.0" styleClass="btn-inventario" text="Módulo de Inventario" />
             <Label fx:id="textBienvenida" layoutX="269.0" layoutY="78.0" text="BIENVENIDO AL MENÚ &#10;DEL BODEGUERO COORDINADOR" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font name="System Bold Italic" size="24.0" />

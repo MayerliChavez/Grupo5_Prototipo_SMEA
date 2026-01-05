@@ -267,6 +267,8 @@ public class moduloClienteController
 
             case "Técnico Coordinador" ->
                     mainController.saver("menuTecnicoC.fxml");
+            case "Gerente General y Técnico" ->
+                    mainController.saver("menuGerencia.fxml");
         }
     }
 }

@@ -257,6 +257,8 @@ public class moduloProveedorController
 
             case "Representante de Cobranzas" ->
                     mainController.saver("menuRepresentanteC.fxml");
+            case "Gerente General y Técnico" ->
+                    mainController.saver("menuGerencia.fxml");
         }
     }
 }

@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="paneFondo"  stylesheets="@../../../css/menusPerfilesCSS.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.menuOperadorController">
+<AnchorPane fx:id="paneFondo" stylesheets="@../../../css/menusPerfilesCSS.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.menuOperadorController">
    <children>
       <Pane fx:id="labelContenedor" layoutX="110.0" layoutY="63.0" prefHeight="600.0" prefWidth="1250.0" stylesheets="@../../../css/menuAdministradorCSS.css" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="63.0">
          <children>
@@ -18,9 +18,7 @@
              </Label>
             <Label fx:id="textNombre" layoutX="328.0" layoutY="244.0" text="Nombres y Apellidos:" />
             <TextField fx:id="labelNombre" layoutX="567.0" layoutY="236.0" prefHeight="44.0" prefWidth="408.0" />
-            <Button fx:id="buttonModuloMantenimiento" layoutX="230.0" layoutY="324.0" mnemonicParsing="false" onAction="#clickModuloMantenimiento" prefHeight="180.0" prefWidth="246.0" styleClass="btn-moduloMantenimiento" text="Módulo de Mantenimiento" alignment="CENTER" textAlignment="CENTER" wrapText="true"/>
-            <Button fx:id="buttonActualizarDatos" layoutX="611.0" layoutY="330.0" mnemonicParsing="false" onAction="#clickActualizarDatos" prefHeight="180.0" prefWidth="246.0" styleClass="btn-informacionPersonal" text="Actualizar Datos Personales" alignment="CENTER" textAlignment="CENTER" wrapText="true"/>
-            <Button fx:id="buttonActualizarCredenciales" layoutX="991.0" layoutY="327.0" mnemonicParsing="false" onAction="#clickActualizarCredenciales" prefHeight="180.0" prefWidth="246.0" styleClass="btn-actualizarCredenciales" text="Actualizar Credenciales" alignment="CENTER" textAlignment="CENTER" wrapText="true"/>
+            <Button fx:id="buttonModuloMantenimiento" alignment="CENTER" layoutX="611.0" layoutY="337.0" mnemonicParsing="false" onAction="#clickModuloMantenimiento" prefHeight="180.0" prefWidth="246.0" styleClass="btn-moduloMantenimiento" text="Módulo de Mantenimiento" textAlignment="CENTER" wrapText="true" />
          </children>
       </Pane>
       <Button fx:id="buttonRegresarMenuPrincipal" layoutX="141.0" layoutY="674.0" mnemonicParsing="false" onAction="#clikcRegresarMenuPrincipal" text="Regresar al Menú Principal" />

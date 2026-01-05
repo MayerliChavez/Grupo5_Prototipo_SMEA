@@ -100,13 +100,10 @@ public class moduloMantenimientoController implements Initializable, Controlador
     @FXML
     private void clickRegresar(ActionEvent event) {
         switch (mainController.getRolUsuario()) {
-            case "Operador" ->
-                    mainController.saver("menuOperador.fxml");
-
-            case "Técnico Coordinador" ->
-                    mainController.saver("menuTecnicoC.fxml");
+            case "Administrador" ->
+                    mainController.saver("menuAdministrador.fxml");
             case "Gerente General y Técnico" ->
-                mainController.saver("menuGerenteC.fxml");
+                    mainController.saver("menuGerencia.fxml");
         }
     }
 }
