@@ -3,26 +3,26 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="paneFondo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../css/menusPerfilesCSS.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.menuOperadorController">
+<AnchorPane fx:id="paneFondo"  stylesheets="@../../../css/menusPerfilesCSS.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.menuOperadorController">
    <children>
-      <Pane fx:id="labelContenedor" layoutX="27.0" layoutY="25.0" prefHeight="354.0" prefWidth="553.0">
+      <Pane fx:id="labelContenedor" layoutX="110.0" layoutY="63.0" prefHeight="600.0" prefWidth="1250.0" stylesheets="@../../../css/menuAdministradorCSS.css" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="63.0">
          <children>
-             <Label fx:id="textBienvenida" layoutX="79.0" text="BIENVENIDO AL MENÚ DEL&#10;OPERADOR" textAlignment="CENTER" wrapText="true">
+             <Label fx:id="textBienvenida" layoutX="370.0" layoutY="80.0" text="BIENVENIDO AL MENÚ DEL&#10;OPERADOR" textAlignment="CENTER" wrapText="true">
                  <font>
                      <Font name="System Bold Italic" size="24.0" />
                  </font>
              </Label>
-            <Label fx:id="textNombre" layoutX="35.0" layoutY="106.0" text="Nombres y Apellidos:" />
-            <TextField fx:id="labelNombre" layoutX="214.0" layoutY="101.0" prefHeight="26.0" prefWidth="301.0" />
-            <Label fx:id="textSeleccion" layoutX="21.0" layoutY="152.0" text="Seleccione a que módulo desea ingresar: " />
-            <Button fx:id="buttonModuloMantenimiento" layoutX="140.0" layoutY="186.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="301.0" text="Ingresar al Módulo de Mantenimiento " />
-            <Button fx:id="buttonRegresarMenuPrincipal" layoutX="16.0" layoutY="308.0" mnemonicParsing="false" onAction="#clikcRegresarMenuPrincipal" text="Regresar al Menú Principal" />
-            <Button fx:id="buttonActualizarDatos" layoutX="159.0" layoutY="235.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="263.0" text="Actualizar Información Personal" />
-            <Button fx:id="buttonActualizarCredenciales" layoutX="336.0" layoutY="308.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="201.0" text="Actualizar Credenciales" />
+            <Label fx:id="textNombre" layoutX="328.0" layoutY="244.0" text="Nombres y Apellidos:" />
+            <TextField fx:id="labelNombre" layoutX="567.0" layoutY="236.0" prefHeight="44.0" prefWidth="408.0" />
+            <Button fx:id="buttonModuloMantenimiento" layoutX="230.0" layoutY="324.0" mnemonicParsing="false" onAction="#clickModuloMantenimiento" prefHeight="180.0" prefWidth="246.0" styleClass="btn-moduloMantenimiento" text="Módulo de Mantenimiento" alignment="CENTER" textAlignment="CENTER" wrapText="true"/>
+            <Button fx:id="buttonActualizarDatos" layoutX="611.0" layoutY="330.0" mnemonicParsing="false" onAction="#clickActualizarDatos" prefHeight="180.0" prefWidth="246.0" styleClass="btn-informacionPersonal" text="Actualizar Datos Personales" alignment="CENTER" textAlignment="CENTER" wrapText="true"/>
+            <Button fx:id="buttonActualizarCredenciales" layoutX="991.0" layoutY="327.0" mnemonicParsing="false" onAction="#clickActualizarCredenciales" prefHeight="180.0" prefWidth="246.0" styleClass="btn-actualizarCredenciales" text="Actualizar Credenciales" alignment="CENTER" textAlignment="CENTER" wrapText="true"/>
          </children>
       </Pane>
+      <Button fx:id="buttonRegresarMenuPrincipal" layoutX="141.0" layoutY="674.0" mnemonicParsing="false" onAction="#clikcRegresarMenuPrincipal" text="Regresar al Menú Principal" />
    </children>
-</Pane>
+</AnchorPane>

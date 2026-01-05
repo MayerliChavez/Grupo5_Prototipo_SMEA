@@ -1,0 +1,151 @@
+/* ===============================
+   CONFIGURACIÓN GENERAL
+================================ */
+
+.root {
+    -fx-font-family: "Segoe UI Semibold Italic", "Segoe UI Italic";
+    -fx-font-size: 44px;
+    -fx-text-fill: #FFFFFF;
+}
+
+/* ===============================
+   FONDO GENERAL
+================================ */
+
+#paneFondo {
+    -fx-background-image: url("../Imagenes/ImagenMenuPerfiles.png");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+/* Contenedor principal translúcido */
+#labelContenedor {
+    -fx-background-color: rgba(255, 255, 255, 0.35);
+    -fx-background-radius: 12;
+    -fx-border-color: rgba(255,255,255,0.6);
+    -fx-border-radius: 12;
+}
+
+/* ===============================
+   TÍTULO
+================================ */
+
+#textBienvenida {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 50px;
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+    -fx-alignment: center;
+
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.85), 10, 0.4, 0, 2);
+}
+
+/* ===============================
+   LABELS
+================================ */
+
+.label {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.85), 8, 0.3, 0, 2);
+}
+
+/* ===============================
+   TEXTFIELD
+================================ */
+
+.text-field {
+    -fx-background-color: rgba(255,255,255,0.95);
+    -fx-border-color: #90A4AE;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 6 10 6 10;
+    -fx-font-size: 20px;
+}
+
+/* ===============================
+   BOTONES DELGADOS (MÓDULOS)
+================================ */
+
+.button {
+    -fx-background-color: linear-gradient(to right, #1E3C72, #2A5298);
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+
+    -fx-padding: 12 10 14 10;
+    -fx-cursor: hand;
+
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 4, 0.2, 0, 1);
+}
+
+.btn-generarOrdenTrabajo {
+    -fx-background-image: url("/Imagenes/iconoOrdenTrabajo.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center 10;
+    -fx-background-size: 40px 40px;
+
+    -fx-padding: 16 10 16 10;
+}
+
+.btn-visualizarCalendario {
+    -fx-background-image: url("/Imagenes/iconoCalendario.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center 10;
+    -fx-background-size: 40px 40px;
+
+    -fx-padding: 16 10 16 10;
+}
+
+.btn-consultarOrdenTrabajo {
+    -fx-background-image: url("/Imagenes/iconoConsultarOrdenTrabajo.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center 10;
+    -fx-background-size: 40px 40px;
+
+    -fx-padding: 16 10 16 10;
+}
+
+.btn-consultarRepuesto {
+    -fx-background-image: url("/Imagenes/iconoBuscarRepuesto.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center 10;
+    -fx-background-size: 40px 40px;
+
+    -fx-padding: 16 10 16 10;
+}
+
+/* Hover */
+.button:hover {
+    -fx-background-color: linear-gradient(to right, #2A5298, #1E3C72);
+    -fx-border-color: #1E88E5;
+}
+
+/* Pressed */
+.button:pressed {
+    -fx-scale-x: 0.97;
+    -fx-scale-y: 0.97;
+}
+
+/* ===============================
+   BOTÓN REGRESAR
+================================ */
+
+#buttonRegresarMenuPrincipal {
+    -fx-background-color: rgba(255,255,255,0.10);
+    -fx-text-fill: #E3F2FD;
+
+    -fx-border-color: rgba(255,255,255,0.6);
+    -fx-border-radius: 22;
+
+    -fx-font-size: 17px;
+}
+
+#buttonRegresarMenuPrincipal:hover {
+    -fx-background-color: rgba(30, 60, 114, 1);
+}

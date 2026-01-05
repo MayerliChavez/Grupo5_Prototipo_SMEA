@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="paneFondo" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.gestionarParametrosController">
+
+    <children>
+        <Pane fx:id="paneContenedor" layoutX="118.0" layoutY="37.0" prefHeight="684.0" prefWidth="1153.0" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="118.0" AnchorPane.rightAnchor="79.59999999999991" AnchorPane.topAnchor="37.0">
+
+            <children>
+
+                <Label fx:id="textBienvenida" alignment="CENTER" layoutX="294.0" layoutY="51.0" prefHeight="58.0" prefWidth="804.0" text="Submódulo Gestionar Parámetros" />
+
+                <Label fx:id="labelDatosOrden" layoutX="260.0" layoutY="402.0" text="Editar parámetro" />
+                <Label fx:id="labelDestino" layoutX="302.0" layoutY="574.0" text="Valor:" />
+                <TextField fx:id="textFieldTipo" layoutX="376.0" layoutY="509.0" prefHeight="37.0" prefWidth="256.0" />
+
+                <Label fx:id="labelObservaciones" layoutX="685.0" layoutY="459.0" text="Descripción:" />
+                <TextArea fx:id="textAreaDescripcion" layoutX="815.0" layoutY="454.0" prefHeight="161.0" prefWidth="323.0" />
+                <Label fx:id="datePickerResponsable" layoutX="307.0" layoutY="516.0" text="Tipo:" />
+                <Label fx:id="labelMotivo" layoutX="283.0" layoutY="460.0" text="Nombre:" />
+                <TextField fx:id="textFielBuscarParametro" layoutX="628.0" layoutY="135.0" prefHeight="41.0" prefWidth="317.0" />
+                <Button fx:id="buttonBuscar" layoutX="966.0" layoutY="134.0" mnemonicParsing="false" onAction="#buscarItem" text="Buscar" />
+                <Label fx:id="labelBuscarItem" layoutX="334.0" layoutY="146.0" text="Ingrese el nombre del párametro:" />
+                <TableView fx:id="tableViewTablaBuscarParametro" layoutX="261.0" layoutY="199.0" prefHeight="185.0" prefWidth="917.0">
+                    <columns>
+                        <TableColumn fx:id="tableColumnNombre" prefWidth="698.3948516845703" text="Nombre" />
+                        <TableColumn fx:id="tableColumnValor" prefWidth="218.40499877929688" text="Valor" />
+                    </columns>
+                </TableView>
+                <TextField fx:id="textFieldNombre" layoutX="373.0" layoutY="453.0" prefHeight="37.0" prefWidth="260.0" />
+            <TextField fx:id="textFieldValor" layoutX="379.0" layoutY="567.0" prefHeight="37.0" prefWidth="250.0" />
+
+            </children>
+        </Pane>
+
+        <Button fx:id="buttonRegresar" layoutX="173.0" layoutY="733.0" onAction="#clickRegresar" text="Regresar" />
+        <Button fx:id="buttonGuardarCambios" layoutX="1266.0" layoutY="732.0" onAction="#guardarOrden" text="Guardar Cambios" />
+    </children>
+    <stylesheets>
+        <URL value="@../../../css/estilos-orden-pago.css" />
+        <URL value="@../../../css/estilos-documento-respaldo.css" />
+    </stylesheets>
+</AnchorPane>

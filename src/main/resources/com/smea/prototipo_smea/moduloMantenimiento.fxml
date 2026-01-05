@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneFondo" stylesheets="@../../../css/menuOperadorCSS.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.moduloMantenimientoController">
+    <children>
+        <Pane fx:id="labelContenedor" layoutX="23.0" layoutY="22.0" prefHeight="600.0" prefWidth="1250.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0">
+            <children>
+                <Label fx:id="textBienvenida" contentDisplay="CENTER" layoutX="308.0" layoutY="52.0" text="BIENVENIDO AL MÓDULO&#10;DE MANTENIMIENTO" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS">
+                    <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                    </font>
+                </Label>
+                <TilePane alignment="CENTER" hgap="15" layoutX="325.0" layoutY="233.0" prefColumns="5" prefHeight="322.0" prefWidth="607.0" vgap="15">
+
+                    <children>
+                        <Button fx:id="buttonPlanificacion" alignment="CENTER" onAction="#clickPlanificacion" prefHeight="291.0" prefWidth="269.0" styleClass="btn-planificacion" text="Planificación de Mantenimientos" textAlignment="CENTER" wrapText="true" />
+                        <Button fx:id="buttonControl" alignment="CENTER" onAction="#clickControl" prefHeight="291.0" prefWidth="269.0" styleClass="btn-control" text="Control de Mantenimientos" textAlignment="CENTER" wrapText="true" />
+
+                    </children>
+                </TilePane>
+                <Button fx:id="buttonRegresar" layoutX="29.0" layoutY="579.0" mnemonicParsing="false" onAction="#clickRegresar" prefHeight="13.0" prefWidth="97.0" text="Regresar" />
+
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
