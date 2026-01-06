@@ -33,6 +33,7 @@ public class controlMantenimientoController implements Initializable, Controlado
     @Override
     public void setMainController(MainController mainController) {
         this.mainController = mainController;
+        configurarPermisos();
     }
 
     // ===== INITIALIZE =====
@@ -44,11 +45,11 @@ public class controlMantenimientoController implements Initializable, Controlado
     // ================= ICONOS =================
         private void cargarIconos() {
 
-        configurarIcono(buttonRegistrarTiempos, "/Imagenes/iconoOrdenTrabajo.png");
-        configurarIcono(buttonRegistrarFallas, "/Imagenes/iconoCalendario.png");
-        configurarIcono(buttonRegistrarDiagnostico, "/Imagenes/iconoConsultarOrdenTrabajo.png");
-        configurarIcono(buttonRegistrarRepuestosUtilizados, "/Imagenes/iconoModificarOrdenTrabajo.png");
-        configurarIcono(buttonVerHistorial, "/Imagenes/iconoModificarOrdenTrabajo.png");
+        configurarIcono(buttonRegistrarTiempos, "/Imagenes/iconoRegistrarTiempo.png");
+        configurarIcono(buttonRegistrarFallas, "/Imagenes/iconoRegistrarFallas.png");
+        configurarIcono(buttonRegistrarDiagnostico, "/Imagenes/iconoDiagnostico.png");
+        configurarIcono(buttonRegistrarRepuestosUtilizados, "/Imagenes/iconoHerramientasR.png");
+        configurarIcono(buttonVerHistorial, "/Imagenes/iconohistorial.png");
     }
 
     private void configurarIcono(Button boton, String ruta) {
@@ -62,6 +63,32 @@ public class controlMantenimientoController implements Initializable, Controlado
         boton.setGraphic(imageView);
         boton.setContentDisplay(ContentDisplay.TOP);
         boton.setGraphicTextGap(15);
+    }
+
+    private void configurarPermisos() {
+        String rol = mainController.getRolUsuario();
+
+        if ("Operador".equalsIgnoreCase(rol)) {
+            buttonVerHistorial.setDisable(false);
+
+            bloquearBoton(buttonRegistrarDiagnostico);
+            bloquearBoton(buttonRegistrarRepuestosUtilizados);
+            bloquearBoton(buttonRegistrarFallas);
+            bloquearBoton(buttonRegistrarTiempos);
+        }
+    }
+
+    private void bloquearBoton(Button boton) {
+
+        Tooltip tooltip = new Tooltip("Acceso restringido");
+        tooltip.setShowDelay(javafx.util.Duration.millis(300));
+        tooltip.setHideDelay(javafx.util.Duration.millis(0));
+
+        boton.setTooltip(tooltip);
+        boton.setOpacity(0.6); // efecto visual de bloqueado
+
+        // Bloquear acción
+        boton.addEventFilter(ActionEvent.ACTION, event -> event.consume());
     }
 
     // ================= EVENTOS =================

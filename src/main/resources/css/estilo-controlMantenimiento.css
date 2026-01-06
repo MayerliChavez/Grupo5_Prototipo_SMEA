@@ -85,7 +85,7 @@
 }
 
 .btn-RegistrarTiempos {
-    -fx-background-image: url("/Imagenes/iconoOrdenTrabajo.png");
+    -fx-background-image: url("/Imagenes/iconoRegistrarTiempo.png");
     -fx-background-repeat: no-repeat;
     -fx-background-position: center 10;
     -fx-background-size: 40px 40px;
@@ -94,7 +94,7 @@
 }
 
 .btn-RegistrarFallas {
-    -fx-background-image: url("/Imagenes/iconoCalendario.png");
+    -fx-background-image: url("/Imagenes/iconoRegistrarFallas.png");
     -fx-background-repeat: no-repeat;
     -fx-background-position: center 10;
     -fx-background-size: 40px 40px;
@@ -103,7 +103,7 @@
 }
 
 .btn-RegistrarDiagnostico {
-    -fx-background-image: url("/Imagenes/iconoConsultarOrdenTrabajo.png");
+    -fx-background-image: url("/Imagenes/iconoDiagnostico.png");
     -fx-background-repeat: no-repeat;
     -fx-background-position: center 10;
     -fx-background-size: 40px 40px;
@@ -112,7 +112,7 @@
 }
 
 .btn-RegistrarRepuestosUtilizados {
-    -fx-background-image: url("/Imagenes/iconoModificarOrdenTrabajo.png");
+    -fx-background-image: url("/Imagenes/iconoHerramientasR.png");
     -fx-background-repeat: no-repeat;
     -fx-background-position: center 10;
     -fx-background-size: 40px 40px;
@@ -121,7 +121,7 @@
 }
 
 .btn-VerHistorial {
-    -fx-background-image: url("/Imagenes/iconoModificarOrdenTrabajo.png");
+    -fx-background-image: url("/Imagenes/iconohistorial.png");
     -fx-background-repeat: no-repeat;
     -fx-background-position: center 10;
     -fx-background-size: 40px 40px;
