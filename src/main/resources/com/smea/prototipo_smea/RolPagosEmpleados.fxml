@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneFondo" stylesheets="@../../../css/estilo-consultar-proveedor.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.RolPagosEmpleadosController">
+
+    <children>
+
+        <Pane fx:id="paneContenedor" layoutX="100" layoutY="40" prefHeight="600.0" prefWidth="1250.0" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="63.0">
+
+            <children>
+
+                <Label fx:id="labelBienvenida" layoutX="554.0" layoutY="41.0" prefHeight="30.0" prefWidth="257.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Rol de Pago de Empleados">
+               <font>
+                  <Font size="44.0" />
+               </font></Label>
+
+                <!-- Datos generales -->
+                <Label layoutX="393.0" layoutY="119.0" text="Empleado:" />
+                <ComboBox fx:id="comboEmpleado" layoutX="513.0" layoutY="114.0" prefWidth="300" />
+
+                <Label layoutX="393.0" layoutY="169.0" text="Mes:" />
+                <ComboBox fx:id="comboMes" layoutX="513.0" layoutY="164.0" prefWidth="300" />
+
+                <!-- Ingresos -->
+                <Label layoutX="198.0" layoutY="258.0" text="Horas trabajadas:" />
+                <TextField fx:id="txtHoras" layoutX="376.0" layoutY="254.0" />
+
+                <Label layoutX="229.0" layoutY="308.0" text="Pago por hora:" />
+                <TextField fx:id="txtPagoHora" layoutX="376.0" layoutY="304.0" />
+
+                <Label layoutX="250.0" layoutY="363.0" text="Horas extra:" />
+                <TextField fx:id="txtHorasExtra" layoutX="380.0" layoutY="359.0" />
+
+                <Label layoutX="217.0" layoutY="419.0" text="Valor hora extra:" />
+                <TextField fx:id="txtValorHoraExtra" layoutX="382.0" layoutY="416.0" />
+
+                <!-- Otros -->
+                <Label layoutX="665.0" layoutY="257.0" text="Bonificaciones:" />
+                <TextField fx:id="txtBonos" layoutX="815.0" layoutY="252.0" />
+
+                <Label layoutX="663.0" layoutY="313.0" text="Descuentos:" />
+                <TextField fx:id="txtDescuentos" layoutX="813.0" layoutY="308.0" />
+
+                <!-- Resultados -->
+                <Label layoutX="663.0" layoutY="373.0" text="Sueldo bruto:" />
+                <TextField fx:id="txtSueldoBruto" editable="false" layoutX="813.0" layoutY="368.0" />
+
+                <Label layoutX="665.0" layoutY="430.0" text="Sueldo neto:" />
+                <TextField fx:id="txtSueldoNeto" editable="false" layoutX="815.0" layoutY="425.0" />
+
+            </children>
+        </Pane>
+
+          <!-- Botones -->
+          <Button fx:id="buttonCalcular" layoutX="590.0" layoutY="655.0" onAction="#calcularRol" text="Calcular" />
+
+          <Button fx:id="buttonLimpiar" layoutX="710.0" layoutY="655.0" onAction="#limpiar" text="Limpiar" />
+
+          <Button fx:id="buttonExportar" layoutX="830.0" layoutY="655.0" onAction="#exportar" text="Exportar" />
+      <Button fx:id="buttonRegresar" layoutX="149.0" layoutY="686.0" mnemonicParsing="false" onAction="#regresar" text="Regresar" />
+    </children>
+</AnchorPane>

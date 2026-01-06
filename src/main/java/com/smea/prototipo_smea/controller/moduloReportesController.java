@@ -19,8 +19,6 @@ public class moduloReportesController implements Initializable, ControladorInyec
     // ====== FXML ======
     @FXML private Button buttonOperativos;
     @FXML private Button buttonRRHH;
-    @FXML private Button buttonFinancieros;
-    @FXML private Button buttonComerciales;
     @FXML private Button buttonRegresar;
 
     // ====== INYECCIÓN ======
@@ -32,7 +30,7 @@ public class moduloReportesController implements Initializable, ControladorInyec
     // ====== INIT ======
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+            cargarIconos();
     }
 
     // ================== ICONOS ==================
@@ -45,14 +43,6 @@ public class moduloReportesController implements Initializable, ControladorInyec
         configurarIcono(
                 buttonRRHH,
                 "/Imagenes/iconoRRHH.png"
-        );
-        configurarIcono(
-                buttonFinancieros,
-                "/Imagenes/iconoFinanciero.png"
-        );
-        configurarIcono(
-                buttonComerciales,
-                "/Imagenes/iconoComerciales.png"
         );
     }
 
@@ -81,24 +71,16 @@ public class moduloReportesController implements Initializable, ControladorInyec
         mainController.saver("reportesRRHH.fxml");
     }
 
-    @FXML
-    private void clickFinancieros() {
-        mainController.saver("reportesFinancieros.fxml");
-    }
-
-    @FXML
-    private void clickComerciales() {
-        mainController.saver("reportesComerciales.fxml");
-    }
 
     @FXML
     private void clickRegresar(ActionEvent event) {
         switch (mainController.getRolUsuario()) {
             case "Administrador" ->
                     mainController.saver("menuAdministrador.fxml");
-
             case "Representante de Tesorería" ->
                     mainController.saver("menuTecnicoC.fxml");
+            case "Gerente General y Técnico" ->
+                    mainController.saver("menuGerencia.fxml");
         }
     }
 }
