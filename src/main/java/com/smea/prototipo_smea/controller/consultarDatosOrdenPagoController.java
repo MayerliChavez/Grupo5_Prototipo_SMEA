@@ -56,9 +56,21 @@ public class consultarDatosOrdenPagoController
 
     private void cargarDatosSimulados() {
         listaOrdenes = FXCollections.observableArrayList(
-                new OrdenPago("OP-001", "Proveedor A", LocalDate.now(), 120.50, "Transferencia", "Pago correspondiente a servicios de mantenimiento."),
-                new OrdenPago("OP-002", "Proveedor B", LocalDate.now().minusDays(2), 300.00, "Transferencia", "Pago correspondiente a servicios de mantenimiento."),
-                new OrdenPago("OP-003", "Proveedor C", LocalDate.now().minusDays(5), 75.90, "Transferencia", "Pago correspondiente a servicios de mantenimiento.")
+                new OrdenPago(
+                        "OP-001", "Proveedor A", LocalDate.of(2026, 1, 5), 250.0,
+                        "Transferencia", "Pago pendiente de revisión", "Cliente A", "Av. Quito 123",
+                        "Mantenimiento", "Alta", "Técnico 1", "Pendiente"
+                ),
+                new OrdenPago(
+                        "OP-001", "Proveedor A", LocalDate.of(2026, 1, 5), 250.0,
+                        "Transferencia", "Pago pendiente de revisión", "Cliente A", "Av. Quito 123",
+                        "Mantenimiento", "Alta", "Técnico 1", "Pendiente"
+                ),
+                new OrdenPago(
+                        "OP-004", "Proveedor D", LocalDate.of(2026, 1, 8), 300.0,
+                        "Transferencia", "Pago parcial recibido", "Cliente D", "Calle 9 de Octubre 200",
+                        "Mantenimiento", "Alta", "Técnico 1", "Pendiente"
+                )
         );
 
         tableViewTablaContenido.setItems(listaOrdenes);

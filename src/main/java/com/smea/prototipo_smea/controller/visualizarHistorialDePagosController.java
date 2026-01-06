@@ -72,19 +72,23 @@ public class visualizarHistorialDePagosController
     private void cargarDatosSimulados() {
 
         listaOrdenes = FXCollections.observableArrayList(
-                new OrdenPago("OP-001", "Proveedor A",
-                        LocalDate.of(2024, 11, 10),
-                        450.00, "Transferencia", "APROBADA"),
+                new OrdenPago(
+                "OP-001", "Proveedor A", LocalDate.of(2026, 1, 5), 250.0,
+                "Transferencia", "Pago pendiente de revisión", "Cliente A", "Av. Quito 123",
+                "Mantenimiento", "Alta", "Técnico 1", "Pendiente"
+        ),
 
-                new OrdenPago("OP-002", "Proveedor B",
-                        LocalDate.of(2024, 11, 18),
-                        1200.50, "Cheque", "APROBADA"),
+                new OrdenPago(
+                        "OP-002", "Proveedor B", LocalDate.of(2026, 1, 6), 400.0,
+                        "Efectivo", "Pago completado con factura", "Cliente B", "Calle Loja 45",
+                        "Instalación", "Media", "Técnico 2", "Completado"
+                ),
 
-                new OrdenPago("OP-003", "Proveedor C",
-                        LocalDate.of(2024, 12, 2),
-                        300.00, "Efectivo", "APROBADA")
-        );
-
+                new OrdenPago(
+                        "OP-004", "Proveedor D", LocalDate.of(2026, 1, 8), 300.0,
+                        "Transferencia", "Pago parcial recibido", "Cliente D", "Calle 9 de Octubre 200",
+                        "Mantenimiento", "Alta", "Técnico 1", "Pendiente"
+                ));
         // ⚠️ Solo aprobadas
         tableViewOrdenPago.setItems(listaOrdenes);
     }

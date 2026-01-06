@@ -111,8 +111,8 @@
     -fx-padding: 16 10 16 10;
 }
 
-.btn-consultarRepuesto {
-    -fx-background-image: url("/Imagenes/iconoBuscarRepuesto.png");
+.btn-modificarOrden {
+    -fx-background-image: url("/Imagenes/iconoModificarOrdenTrabajo.png");
     -fx-background-repeat: no-repeat;
     -fx-background-position: center 10;
     -fx-background-size: 40px 40px;

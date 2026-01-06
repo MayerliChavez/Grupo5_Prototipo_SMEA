@@ -23,8 +23,6 @@ public class menuAdministradorController implements Initializable, ControladorIn
     @FXML private Button buttonmoduloreporte;
     @FXML private Button buttonModuloAdministracionSistema;
     @FXML private Button buttonRegresarMenuPrincipal;
-    @FXML private Button buttonActualizarDatos;
-    @FXML private Button buttonActualizarCredenciales;
     @FXML private Button buttonModuloProveedor;
     @FXML private Button buttonModuloInventario;
     @FXML private Button buttonModuloCliente;
@@ -107,34 +105,6 @@ public class menuAdministradorController implements Initializable, ControladorIn
         buttonModuloAdministracionSistema.setGraphic(imageViewAdministradorSistema);
         buttonModuloAdministracionSistema.setContentDisplay(ContentDisplay.TOP);
         buttonModuloAdministracionSistema.setGraphicTextGap(12);
-
-        // ICONO DEL BOTÓN INFORMACIÓN PERSONAL
-        Image imageInformacionPersonal = new Image(
-                getClass().getResourceAsStream("/Imagenes/iconoInformacionPersonal.png")
-        );
-
-        ImageView imageViewInformacionPersonal = new ImageView(imageInformacionPersonal);
-        imageViewInformacionPersonal.setFitWidth(64);
-        imageViewInformacionPersonal.setFitHeight(64);
-        imageViewInformacionPersonal.setPreserveRatio(true);
-
-        buttonActualizarDatos.setGraphic(imageViewInformacionPersonal);
-        buttonActualizarDatos.setContentDisplay(ContentDisplay.TOP);
-        buttonActualizarDatos.setGraphicTextGap(12);
-
-        // ICONO DEL BOTÓN ACTUALIZAR CREDENCIALES
-        Image imageActualizarCredenciales = new Image(
-                getClass().getResourceAsStream("/Imagenes/iconoActualizarCredenciales.png")
-        );
-
-        ImageView imageViewActualizarCredenciales = new ImageView(imageActualizarCredenciales);
-        imageViewActualizarCredenciales.setFitWidth(50);
-        imageViewActualizarCredenciales.setFitHeight(50);
-        imageViewActualizarCredenciales.setPreserveRatio(true);
-
-        buttonActualizarCredenciales.setGraphic(imageViewActualizarCredenciales);
-        buttonActualizarCredenciales.setContentDisplay(ContentDisplay.TOP);
-        buttonActualizarCredenciales.setGraphicTextGap(15);
     }
 
     // ====== INYECCIÓN ======
@@ -174,15 +144,4 @@ public class menuAdministradorController implements Initializable, ControladorIn
     private void clickIngresarModuloAdministracionSistema(ActionEvent event) {
         mainController.saver("moduloAdministracionSistema.fxml");
     }
-
-    private void mostrarAlerta(String titulo, String mensaje, Alert.AlertType tipo) {
-        Alert alert = new Alert(tipo);
-        alert.setTitle(titulo);
-        alert.setHeaderText(null);
-        alert.setContentText(mensaje);
-        alert.showAndWait();
-    }
-
-
-
 }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="paneFondo" stylesheets="@../../../css/estilo-consultar-proveedor.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.registrarTiemposController">
+    <children>
+        <Pane fx:id="paneContenedor" layoutX="23.0" layoutY="22.0" prefHeight="600.0" prefWidth="1250.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0">
+            <children>
+                <Label fx:id="labelBienvenida" layoutX="399.0" layoutY="34.0" text="Registrar Tiempos" />
+
+                <Label layoutX="297.0" layoutY="156.0" text="Orden de Trabajo:" />
+                <ChoiceBox fx:id="choiceOrdenes" layoutX="483.0" layoutY="149.0" prefHeight="44.0" prefWidth="375.0" />
+
+                <Label layoutX="382.0" layoutY="221.0" text="Técnico:" />
+                <ChoiceBox fx:id="choiceTecnico" layoutX="484.0" layoutY="212.0" prefHeight="44.0" prefWidth="380.0" />
+
+                <Label layoutX="401.0" layoutY="280.0" text="Fecha:" />
+                <DatePicker fx:id="datePickerFecha" layoutX="485.0" layoutY="275.0" prefHeight="41.0" prefWidth="271.0" />
+
+                <Label layoutX="307.0" layoutY="341.0" text="Horas Trabajadas:" />
+                <TextField fx:id="txtHoras" layoutX="486.0" layoutY="335.0" prefWidth="100" />
+
+                <Label layoutX="351.0" layoutY="399.0" text="Descripción:" />
+                <TextArea fx:id="txtDescripcion" layoutX="484.0" layoutY="397.0" prefHeight="100" prefWidth="400" />
+      
+                <Button fx:id="btnGuardar" layoutX="685.0" layoutY="548.0" onAction="#guardarTiempo" text="Guardar" />
+                <Button fx:id="btnLimpiar" layoutX="566.0" layoutY="546.0" onAction="#limpiarFormulario" prefHeight="41.0" prefWidth="100.0" text="Limpiar" />
+            </children>
+        </Pane>
+      <Button fx:id="buttonRegresar" layoutX="127.0" layoutY="680.0" mnemonicParsing="false" text="Regresar" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="paneFondo" prefHeight="800" prefWidth="1400" stylesheets="@../../../css/estilos-documento-respaldo.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.visualizarCalendarioController">
+
+    <Pane fx:id="paneContenedor" layoutX="142.0" layoutY="67.0" prefHeight="700" prefWidth="1240" styleClass="panel-principal">
+
+        <Label fx:id="labelBienvenida" layoutX="253.0" layoutY="32.0" styleClass="titulo-modulo" text="CRONOGRAMA DE ÓRDENES DE TRABAJO" />
+
+        <!-- FILTROS -->
+        <Label layoutX="230.0" layoutY="127.0" text="Fecha:" />
+        <DatePicker fx:id="dateFiltro" layoutX="313.0" layoutY="120.0" />
+
+        <Label layoutX="570.0" layoutY="130.0" text="Técnico:" />
+        <ChoiceBox fx:id="choiceTecnico" layoutX="662.0" layoutY="125.0" prefHeight="35.0" prefWidth="236.0" />
+
+        <Button fx:id="buttonBuscar" layoutX="931.0" layoutY="121.0" onAction="#buscar" text="Buscar" />
+
+        <!-- TABLA -->
+        <TableView fx:id="tablaCronograma" layoutX="104.0" layoutY="195.0" prefHeight="434.0" prefWidth="1080">
+
+            <columns>
+                <TableColumn fx:id="colFecha" prefWidth="148.8666534423828" text="Fecha" />
+                <TableColumn fx:id="colHora" prefWidth="133.53329467773438" text="Hora" />
+                <TableColumn fx:id="colCliente" prefWidth="309.2107238769531" text="Cliente" />
+                <TableColumn fx:id="colTecnico" prefWidth="329.10137939453125" text="Técnico" />
+                <TableColumn fx:id="colEstado" prefWidth="159.76275634765625" text="Estado" />
+            </columns>
+        </TableView>
+
+        <!-- ACCIONES -->
+        <Button fx:id="buttonVerDeralle" layoutX="547.0" layoutY="646.0" onAction="#verDetalle" text="Ver Detalle" />
+
+        <Button fx:id="buttonCambiarEstado" layoutX="1071.0" layoutY="649.0" onAction="#cambiarEstado" text="Cambiar Estado" />
+      <Button fx:id="buttonRegresar" layoutX="26.0" layoutY="648.0" mnemonicParsing="false" text="Regresar" />
+      <Button fx:id="buttonLimpiar" layoutX="1049.0" layoutY="91.0" mnemonicParsing="false" onAction="#limpiar" text="Limpiar" />
+   
+        <Button fx:id="buttonHoy" layoutX="1059.0" layoutY="141.0" onAction="#irHoy" text="Hoy" />
+
+    </Pane>
+</AnchorPane>

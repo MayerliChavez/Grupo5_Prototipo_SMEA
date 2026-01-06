@@ -1,5 +1,6 @@
 package com.smea.prototipo_smea.controller;
 
+import com.smea.prototipo_smea.clasesNormales.MovimientoMantenimiento;
 import javafx.collections.*;
 import javafx.fxml.*;
 import javafx.scene.control.*;

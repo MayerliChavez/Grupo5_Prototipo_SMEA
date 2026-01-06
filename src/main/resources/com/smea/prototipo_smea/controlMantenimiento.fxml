@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneFondo" stylesheets="@../../../css/estilo-controlMantenimiento.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.controlMantenimientoController">
+    <children>
+        <Pane fx:id="labelContenedor" layoutX="23.0" layoutY="22.0" prefHeight="600.0" prefWidth="1250.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0">
+            <children>
+                <Label fx:id="textBienvenida" contentDisplay="CENTER" layoutX="196.0" layoutY="14.0" text="BIENVENIDO AL SUBMÓDULO CONTROL&#10;DE MANTENIMIENTO" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS">
+                    <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                    </font>
+                </Label>
+                <TilePane alignment="CENTER" hgap="15" layoutX="177.0" layoutY="184.0" prefColumns="5" prefHeight="244.0" prefWidth="965.0" vgap="15">
+
+                    <children>
+                        <Button fx:id="buttonRegistrarTiempos" alignment="CENTER" onAction="#clickRegistrarTiempos" prefHeight="203.0" prefWidth="223.0" styleClass="btn-RegistrarTiempos" text="Registrar Tiempos" textAlignment="CENTER" wrapText="true" />
+                        <Button fx:id="buttonRegistrarFallas" alignment="CENTER" onAction="#clickRegistrarFallas" prefHeight="203.0" prefWidth="223.0" styleClass="btn-RegistrarFallas" text="Registrar Fallas" textAlignment="CENTER" wrapText="true" />
+                        <Button fx:id="buttonRegistrarDiagnostico" alignment="CENTER" onAction="#clickRegistrarDiagnostico" prefHeight="203.0" prefWidth="223.0" styleClass="btn-RegistrarDiagnostico" text="Registrar Diagnóstico" textAlignment="CENTER" wrapText="true" />
+                        <Button fx:id="buttonRegistrarRepuestosUtilizados" alignment="CENTER" onAction="#clickRegistrarRepuestosUtilizados" prefHeight="203.0" prefWidth="223.0" styleClass="btn-RegistrarRepuestosUtilizados" text="Registrar Repuestos Utilizados" textAlignment="CENTER" wrapText="true" />
+                  <Button fx:id="buttonVerHistorial" alignment="CENTER" onAction="#clickVerHistorial" prefHeight="203.0" prefWidth="223.0" styleClass="btn-VerHistorial" text="Visualizar Historial de Mantenimiento" textAlignment="CENTER" wrapText="true" />
+
+                    </children>
+                </TilePane>
+                <Button fx:id="buttonRegresar" layoutX="29.0" layoutY="579.0" mnemonicParsing="false" onAction="#clickRegresar" prefHeight="13.0" prefWidth="97.0" text="Regresar" />
+
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

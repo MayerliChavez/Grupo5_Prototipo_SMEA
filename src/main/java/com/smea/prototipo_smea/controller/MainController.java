@@ -1,5 +1,6 @@
 package com.smea.prototipo_smea.controller;
 
+import com.smea.prototipo_smea.clasesNormales.OrdenPago;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.layout.StackPane;
@@ -63,4 +64,6 @@ public class MainController {
             System.err.println("No se pudo cargar: " + fxml);
         }
     }
+
+
 }

@@ -3,6 +3,8 @@ module com.smea.prototipo_smea {
     requires javafx.fxml;
     requires java.desktop;
     requires javafx.graphics;
+    requires javafx.base;
+    //requires com.smea.prototipo_smea;
     //requires com.smea.prototipo_smea;
     //requires com.smea.prototipo_smea;
     //requires com.smea.prototipo_smea;

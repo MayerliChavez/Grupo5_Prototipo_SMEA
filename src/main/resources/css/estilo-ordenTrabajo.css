@@ -1,0 +1,156 @@
+.root {
+    -fx-font-family: "Segoe UI", "Arial";
+    -fx-text-fill: #37474F;
+}
+/* ===================== FONDO GENERAL ===================== */
+
+#paneFondo {
+    -fx-background-color: linear-gradient(
+            to bottom right,
+            #F4F6F8,
+            #E3F2FD
+    );
+}
+
+/* ===================== PANEL PRINCIPAL ===================== */
+
+#paneContenedor {
+    -fx-background-color: rgba(255,255,255,0.88);
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-color: #CFD8DC;
+    -fx-border-width: 1.5;
+    -fx-padding: 30;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.12),
+            18,
+            0.3,
+            0,
+            6
+    );
+}
+
+
+/* ===================== TÍTULO ===================== */
+
+#textBienvenida,
+#labelBienvenida {
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #263238;
+    -fx-alignment: center;
+}
+
+/* ===============================
+   LABELS GENERALES
+================================ */
+.label {
+    -fx-font-size: 19px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #455A64;
+}
+
+/* ===================== TITLED PANE ===================== */
+
+.titled-pane {
+    -fx-text-fill: #1f2937;
+    -fx-font-weight: bold;
+}
+
+.titled-pane > .title {
+    -fx-background-color: #e3f2fd;
+    -fx-background-radius: 8 8 0 0;
+    -fx-border-color: #bbdefb;
+    -fx-border-width: 0 0 1 0;
+}
+
+.titled-pane > .content {
+    -fx-background-color: #f9fbfd;
+    -fx-border-color: #bbdefb;
+    -fx-border-width: 0 1 1 1;
+}
+
+
+/* ===================== LABELS ===================== */
+
+.label {
+    -fx-font-size: 19px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #455A64;
+}
+
+
+/* ===================== INPUTS ===================== */
+
+.text-field,
+.choice-box,
+.date-picker,
+.text-area {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cbd5e1;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-font-size: 19px;
+}
+
+.text-field:focused,
+.choice-box:focused,
+.date-picker:focused,
+.text-area:focused {
+    -fx-border-color: #3b82f6;
+    -fx-effect: dropshadow(gaussian, rgba(59,130,246,0.4), 6, 0, 0, 0);
+}
+
+.text-area {
+    -fx-wrap-text: true;
+}
+
+.text-field {
+    -fx-pref-height: 35;
+    -fx-pref-width: 250;
+}
+
+/* ===================== BOTONES ===================== */
+
+.button {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-cursor: hand;
+}
+
+
+/* ---- Guardar ---- */
+.btn-guardar {
+    -fx-background-color: #22c55e;
+    -fx-text-fill: white;
+}
+
+.btn-guardar:hover {
+    -fx-background-color: #16a34a;
+}
+
+
+/* ---- Limpiar ---- */
+.btn-limpiar {
+    -fx-background-color: #f59e0b;
+    -fx-text-fill: white;
+}
+
+.btn-limpiar:hover {
+    -fx-background-color: #d97706;
+}
+
+
+/* ---- Cancelar ---- */
+.btn-cancelar {
+    -fx-background-color: #ef4444;
+    -fx-text-fill: white;
+}
+
+.btn-cancelar:hover {
+    -fx-background-color: #dc2626;
+}

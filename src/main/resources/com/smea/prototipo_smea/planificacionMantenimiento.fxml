@@ -22,7 +22,7 @@
                         <Button fx:id="buttonRegistrarOrdenTrabajo" alignment="CENTER" onAction="#clickRegistrarCatalogo" prefHeight="203.0" prefWidth="223.0" styleClass="btn-generarOrdenTrabajo" text=" Generar Orden de Trabajo" textAlignment="CENTER" wrapText="true" />
                         <Button fx:id="buttonVisualizarCalendario" alignment="CENTER" onAction="#clickActualizarCatalogo" prefHeight="203.0" prefWidth="223.0" styleClass="btn-visualizarCalendario" text="Visualizar Calendario" textAlignment="CENTER" wrapText="true" />
                         <Button fx:id="buttonConsultarOrdenTrabajo" alignment="CENTER" onAction="#clickAsignarCategoria" prefHeight="203.0" prefWidth="223.0" styleClass="btn-consultarOrdenTrabajo" text="Consultar Orden de Trabajo" textAlignment="CENTER" wrapText="true" />
-                  <Button fx:id="buttonConsultarRepuesto" alignment="CENTER" onAction="#clickRegistrarCatalogo" prefHeight="203.0" prefWidth="223.0" styleClass="btn-consultarRepuesto" text="Consultar Repuesto" textAlignment="CENTER" wrapText="true" />
+                  <Button fx:id="buttonModificarOrdenTrabajo" alignment="CENTER" onAction="#clickModificarOrden" prefHeight="203.0" prefWidth="223.0" styleClass="btn-modificarOrden" text="Modificar Orden de Trabajo" textAlignment="CENTER" wrapText="true" />
 
                     </children>
                 </TilePane>

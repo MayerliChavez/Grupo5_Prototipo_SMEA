@@ -60,29 +60,6 @@ public class moduloMantenimientoController implements Initializable, Controlador
         boton.setGraphicTextGap(25);
     }
 
-    // ================== PERMISOS ==================
-    private void configurarPermisos() {
-
-        String rol = mainController.getRolUsuario();
-        if ("Operador".equalsIgnoreCase(rol)) {
-            buttonControl.setDisable(false);
-
-            bloquearBoton(buttonPlanificacion);
-        }
-    }
-
-    private void bloquearBoton(Button boton) {
-
-        Tooltip tooltip = new Tooltip("Acceso restringido");
-        tooltip.setShowDelay(javafx.util.Duration.millis(300));
-        tooltip.setHideDelay(javafx.util.Duration.millis(0));
-
-        boton.setTooltip(tooltip);
-        boton.setOpacity(0.6); // efecto visual de bloqueado
-
-        // Bloquear acción
-        boton.addEventFilter(ActionEvent.ACTION, event -> event.consume());
-    }
 
     // ================== ACCIONES ==================
     @FXML
@@ -93,7 +70,6 @@ public class moduloMantenimientoController implements Initializable, Controlador
 
     @FXML
     private void clickControl(ActionEvent event) {
-        // Pantalla de control / ejecución de mantenimientos
         mainController.saver("controlMantenimiento.fxml");
     }
 

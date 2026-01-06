@@ -1,15 +1,18 @@
 package com.smea.prototipo_smea.controller;
 
+import com.smea.prototipo_smea.clasesNormales.OrdenPago;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.ContentDisplay;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import javax.swing.*;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 
 public class planificacionMantenimientoController implements Initializable, ControladorInyectable {
@@ -23,7 +26,7 @@ public class planificacionMantenimientoController implements Initializable, Cont
     @FXML private Button buttonRegistrarOrdenTrabajo;
     @FXML private Button buttonVisualizarCalendario;
     @FXML private Button buttonConsultarOrdenTrabajo;
-    @FXML private Button buttonConsultarRepuesto;
+    @FXML private Button buttonModificarOrdenTrabajo;
     @FXML private Button buttonRegresar;
 
     // ===== INYECCIÓN =====
@@ -44,7 +47,7 @@ public class planificacionMantenimientoController implements Initializable, Cont
         configurarIcono(buttonRegistrarOrdenTrabajo, "/Imagenes/iconoOrdenTrabajo.png");
         configurarIcono(buttonVisualizarCalendario, "/Imagenes/iconoCalendario.png");
         configurarIcono(buttonConsultarOrdenTrabajo, "/Imagenes/iconoConsultarOrdenTrabajo.png");
-        configurarIcono(buttonConsultarRepuesto, "/Imagenes/iconoBuscarRepuesto.png");
+        configurarIcono(buttonModificarOrdenTrabajo, "/Imagenes/iconoModificarOrdenTrabajo.png");
     }
 
     private void configurarIcono(Button boton, String ruta) {
@@ -73,9 +76,10 @@ public class planificacionMantenimientoController implements Initializable, Cont
     }
 
     @FXML
-    private void clickAsignarCategoria(ActionEvent event) {
-        mainController.saver("consultarOrdenTrabajo.fxml");
-    }
+    private void clickAsignarCategoria(ActionEvent event) {mainController.saver("consultarOrdenTrabajo.fxml");}
+
+    @FXML
+    private void clickModificarOrden(ActionEvent event) {mainController.saver("modificarOrdenTrabajoTabla.fxml");}
 
     @FXML
     private void clickRegresar(ActionEvent event) {

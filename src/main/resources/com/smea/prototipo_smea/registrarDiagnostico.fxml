@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane fx:id="paneFondo" stylesheets="@../../../css/estilo-consultar-proveedor.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.registrarDiagnosticoController">
+
+    <children>
+        <Pane fx:id="paneContenedor" layoutX="110.0" layoutY="63.0" prefHeight="600.0" prefWidth="1250.0" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="63.0">
+
+            <children>
+                <Label fx:id="labelBienvenida" layoutX="369.0" layoutY="70.0" text="Registrar Diagnóstico">
+                </Label>
+
+                <Label layoutX="332.0" layoutY="186.0" text="Código de orden/equipo:" />
+                <TextField fx:id="txtCodigoOrden" layoutX="584.0" layoutY="182.0" prefHeight="41.0" prefWidth="380.0" />
+
+                <Label layoutX="360.0" layoutY="250.0" text="Fecha del diagnóstico:" />
+                <DatePicker fx:id="dateDiagnostico" layoutX="587.0" layoutY="244.0" />
+
+                <Label layoutX="448.0" layoutY="301.0" text="Diagnóstico:" />
+                <TextArea fx:id="txtDiagnostico" layoutX="588.0" layoutY="301.0" prefHeight="100" prefWidth="427.0" />
+
+                <Label layoutX="447.0" layoutY="430.0" text="Responsable:" />
+                <TextField fx:id="txtResponsable" layoutX="587.0" layoutY="423.0" prefHeight="41.0" prefWidth="361.0" />
+
+                <Label layoutX="497.0" layoutY="487.0" text="Estado:" />
+                <ComboBox fx:id="comboEstado" layoutX="589.0" layoutY="487.0" prefHeight="33.0" prefWidth="236.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Pendiente" />
+                            <String fx:value="En Proceso" />
+                            <String fx:value="Finalizado" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+            </children>
+        </Pane>
+
+          <Button fx:id="btnGuardar" layoutX="831.0" layoutY="681.0" onAction="#clickGuardar" text="Guardar" />
+          <Button fx:id="btnCancelar" layoutX="670.0" layoutY="679.0" onAction="#clickCancelar" text="Cancelar" />
+      <Button fx:id="buttonRegresar" layoutX="137.0" layoutY="675.0" mnemonicParsing="false" onAction="#clickRegresar" text="Regresar" />
+    </children>
+</AnchorPane>
