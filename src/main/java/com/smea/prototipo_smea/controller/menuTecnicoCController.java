@@ -22,8 +22,6 @@ public class menuTecnicoCController implements Initializable, ControladorInyecta
     private TextField labelNombre;
     @FXML private Button buttonModuloClientes;
     @FXML private Button buttonActualizarDatos;
-    @FXML private Button buttonActualizarCredenciales;
-    @FXML private Button buttonModuloMantenimiento;
     @FXML private Button buttonRegresarMenuPrincipal;
 
 
@@ -70,34 +68,6 @@ public class menuTecnicoCController implements Initializable, ControladorInyecta
         buttonActualizarDatos.setGraphic(imageViewInformacionPersonal);
         buttonActualizarDatos.setContentDisplay(ContentDisplay.TOP);
         buttonActualizarDatos.setGraphicTextGap(12);
-
-        // ICONO DEL BOTÓN ACTUALIZAR CREDENCIALES
-        Image imageActualizarCredenciales = new Image(
-                getClass().getResourceAsStream("/Imagenes/iconoActualizarCredenciales.png")
-        );
-
-        ImageView imageViewActualizarCredenciales = new ImageView(imageActualizarCredenciales);
-        imageViewActualizarCredenciales.setFitWidth(50);
-        imageViewActualizarCredenciales.setFitHeight(50);
-        imageViewActualizarCredenciales.setPreserveRatio(true);
-
-        buttonActualizarCredenciales.setGraphic(imageViewActualizarCredenciales);
-        buttonActualizarCredenciales.setContentDisplay(ContentDisplay.TOP);
-        buttonActualizarCredenciales.setGraphicTextGap(15);
-
-        // ICONO DEL BOTÓN MÓDULO MANTENIMENTO
-        Image imageModuloMantenimiento = new Image(
-                getClass().getResourceAsStream("/Imagenes/iconoMantenimiento.png")
-        );
-
-        ImageView imageViewModuloMantenimiento = new ImageView(imageModuloMantenimiento);
-        imageViewModuloMantenimiento.setFitWidth(95);
-        imageViewModuloMantenimiento.setFitHeight(95);
-        imageViewModuloMantenimiento.setPreserveRatio(true);
-
-        buttonModuloMantenimiento.setGraphic(imageViewModuloMantenimiento);
-        buttonModuloMantenimiento.setContentDisplay(ContentDisplay.TOP);
-        buttonModuloMantenimiento.setGraphicTextGap(15);
     }
 
     // ====== EVENTOS DE BOTONES ======

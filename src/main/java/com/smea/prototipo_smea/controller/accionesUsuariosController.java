@@ -1,8 +1,6 @@
 package com.smea.prototipo_smea.controller;
 
-import com.smea.prototipo_smea.AccionUsuario;
-import com.smea.prototipo_smea.controller.ControladorInyectable;
-import com.smea.prototipo_smea.controller.MainController;
+import com.smea.prototipo_smea.clasesNormales.AccionUsuario;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;

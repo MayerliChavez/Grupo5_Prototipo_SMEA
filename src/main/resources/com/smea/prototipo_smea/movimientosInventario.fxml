@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="paneFondo" stylesheets="@../../../css/estilo-catalogo-inventario.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.movimientoInventarioController">
+<AnchorPane fx:id="paneFondo" stylesheets="@../../../css/estilo-catalogo-inventario.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smea.prototipo_smea.controller.movimientosInventarioController">
     <children>
         <Pane fx:id="paneContenedor" layoutX="23.0" layoutY="22.0" prefHeight="600.0" prefWidth="1250.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0">
             <children>

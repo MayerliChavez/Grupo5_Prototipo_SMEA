@@ -20,8 +20,6 @@ public class menuOperadorController implements Initializable, ControladorInyecta
     // ====== FXML ======
     @FXML private TextField labelNombre;
     @FXML private Button buttonModuloMantenimiento;
-    @FXML private Button buttonActualizarDatos;
-    @FXML private Button buttonActualizarCredenciales;
 
     // ====== INYECCIÓN ======
     @Override
@@ -40,8 +38,6 @@ public class menuOperadorController implements Initializable, ControladorInyecta
     // ================= ICONOS =================
     private void cargarIconos() {
         configurarIcono(buttonModuloMantenimiento, "/Imagenes/iconoMantenimiento.png");
-        configurarIcono(buttonActualizarDatos, "/Imagenes/iconoInformacionPersonal.png");
-        configurarIcono(buttonActualizarCredenciales, "/Imagenes/iconoActualizarCredenciales.png");
     }
 
     private void configurarIcono(Button boton, String ruta) {
@@ -62,16 +58,6 @@ public class menuOperadorController implements Initializable, ControladorInyecta
     @FXML
     private void clickModuloMantenimiento(ActionEvent event) {
         mainController.saver("moduloMantenimiento.fxml");
-    }
-
-    @FXML
-    private void clickActualizarDatos(ActionEvent event) {
-        mainController.saver("actualizarInformacion.fxml");
-    }
-
-    @FXML
-    private void clickActualizarCredenciales(ActionEvent event) {
-        mainController.saver("actualizarCredenciales.fxml");
     }
 
     @FXML

@@ -20,8 +20,6 @@ public class menuRepresentanteCController
 
     @FXML private TextField labelNombre;
     @FXML private Button buttonModuloProveedor;
-    @FXML private Button buttonActualizarDatos;
-    @FXML private Button buttonActubuttonActualizarDatosalizarCredenciales;
     @FXML private Button buttonRegresarMenuPrincipal;
 
     // ===== INYECCIÓN =====

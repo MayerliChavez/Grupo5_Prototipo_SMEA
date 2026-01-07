@@ -22,8 +22,6 @@ public class menuBodegueroController
     @FXML private TextField labelNombre;
     @FXML private Button buttonModuloInventario;
     @FXML private Button buttonRegresarMenuPrincipal;
-    @FXML private Button buttonActualizarDatos;
-    @FXML private Button buttonActualizarCredenciales;
 
     // ====== INYECCIÓN DEL CONTROLADOR CENTRAL ======
     @Override
@@ -39,35 +37,6 @@ public class menuBodegueroController
     }
 
     private void cargarIconos() {
-
-        // ICONO DEL BOTÓN INFORMACIÓN PERSONAL
-        Image imageInformacionPersonal = new Image(
-                getClass().getResourceAsStream("/Imagenes/iconoInformacionPersonal.png")
-        );
-
-        ImageView imageViewInformacionPersonal = new ImageView(imageInformacionPersonal);
-        imageViewInformacionPersonal.setFitWidth(95);
-        imageViewInformacionPersonal.setFitHeight(95);
-        imageViewInformacionPersonal.setPreserveRatio(true);
-
-        buttonActualizarDatos.setGraphic(imageViewInformacionPersonal);
-        buttonActualizarDatos.setContentDisplay(ContentDisplay.TOP);
-        buttonActualizarDatos.setGraphicTextGap(15);
-
-        // ICONO DEL BOTÓN ACTUALIZAR CREDENCIALES
-        Image imageActualizarCredenciales = new Image(
-                getClass().getResourceAsStream("/Imagenes/iconoActualizarCredenciales.png")
-        );
-
-        ImageView imageViewActualizarCredenciales = new ImageView(imageActualizarCredenciales);
-        imageViewActualizarCredenciales.setFitWidth(95);
-        imageViewActualizarCredenciales.setFitHeight(95);
-        imageViewActualizarCredenciales.setPreserveRatio(true);
-
-        buttonActualizarCredenciales.setGraphic(imageViewActualizarCredenciales);
-        buttonActualizarCredenciales.setContentDisplay(ContentDisplay.TOP);
-        buttonActualizarCredenciales.setGraphicTextGap(15);
-
         // ICONO DEL BOTÓN MÓDULO INVENTARIO
         Image imageModuloMInventario = new Image(
                 getClass().getResourceAsStream("/Imagenes/iconoInventario.png")
@@ -89,18 +58,6 @@ public class menuBodegueroController
     private void clickModuloInventario(ActionEvent event) {
         System.out.println("Click en Módulo de Inventario (Bodeguero)");
         mainController.saver("moduloInventario.fxml");
-    }
-
-    @FXML
-    private void clickActualizarDatos(ActionEvent event) {
-        System.out.println("Click en Actualizar Información Personal (Bodeguero)");
-        mainController.saver("actualizarInformacion.fxml");
-    }
-
-    @FXML
-    private void clickActualizarCredenciales(ActionEvent event) {
-        System.out.println("Click en Actualizar Credenciales (Bodeguero)");
-        mainController.saver("actualizarCredenciales.fxml");
     }
 
     @FXML
